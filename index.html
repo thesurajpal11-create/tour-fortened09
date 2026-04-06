@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayodhya Ramnagari - Tourism & Travel</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🏛️ Ayodhya Ramnagari Tourism</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/destinations.html">Destinations</a></li>
+                <li><a href="pages/bookings.html">Bookings</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li id="authButtons">
+                    <a href="pages/login.html" class="btn-login">Login</a>
+                    <a href="pages/signup.html" class="btn-signup">Sign Up</a>
+                </li>
+                <li id="userProfile" style="display: none;">
+                    <a href="pages/profile.html" class="btn-profile">Profile</a>
+                    <button onclick="logout()" class="btn-logout">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Ayodhya Ramnagari</h2>
+            <p>Explore the Sacred Pilgrimage Destinations of India</p>
+            <a href="pages/destinations.html" class="btn-primary">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="featured-destinations">
+        <div class="container">
+            <h2>Featured Destinations</h2>
+            <div class="destinations-grid" id="featuredDestinations">
+                <!-- Destinations will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Highlights Section -->
+    <section class="featured-destinations">
+        <div class="container">
+            <h2>Tour Highlights</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img class="destination-image" src="/images/ayodhya.jpg" alt="Ayodhya" />
+                    <div class="destination-content">
+                        <h3>Ayodhya</h3>
+                        <p>Visit the sacred city of Lord Ram with historic temples and pilgrimage sites.</p>
+                        <a href="pages/destinations.html" class="btn-primary">Explore Ayodhya</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-image" src="/images/chitrakoot.jpg" alt="Chitrakoot" />
+                    <div class="destination-content">
+                        <h3>Chitrakoot</h3>
+                        <p>Experience divine serenity at Chitrakoot, the land of Ram and Sita.</p>
+                        <a href="pages/destinations.html" class="btn-primary">Explore Chitrakoot</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-image" src="/images/varanasi.jpg" alt="Varanasi" />
+                    <div class="destination-content">
+                        <h3>Varanasi</h3>
+                        <p>Walk the holy ghats of Varanasi and witness the spiritual heart of India.</p>
+                        <a href="pages/destinations.html" class="btn-primary">Explore Varanasi</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-image" src="/images/tree-place.svg" alt="Tree Place" />
+                    <div class="destination-content">
+                        <h3>Tree Place</h3>
+                        <p>Discover special nature and sacred tree spots for calm and spiritual reflection.</p>
+                        <a href="pages/destinations.html" class="btn-primary">Explore Nature</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Ayodhya Ramnagari Tourism</h2>
+            <p>
+                Explore the most sacred and historic pilgrimage destinations in India. 
+                From the holy city of Ayodhya to the spiritual ghats of Varanasi, 
+                we offer unforgettable tourism experiences with comfortable accommodations, 
+                expert guides, and seamless booking services.
+            </p>
+            <div class="about-features">
+                <div class="feature">
+                    <h3>🎯 Expert Guides</h3>
+                    <p>Knowledgeable guides for authentic experiences</p>
+                </div>
+                <div class="feature">
+                    <h3>🛏️ Comfort Stays</h3>
+                    <p>Quality hotels and accommodations</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 Easy Booking</h3>
+                    <p>Simple and secure online booking system</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📞 Phone: 7607745628</p>
+                    <p>💬 WhatsApp: 7607745628</p>
+                    <p>📧 Email: info@ayodhyaramnagari.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <p>
+                        <a href="https://www.instagram.com" target="_blank">📸 Instagram</a> | 
+                        <a href="https://www.youtube.com/@AR_Tourism" target="_blank">▶️ YouTube</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/destinations.html">Destinations</a></li>
+                        <li><a href="pages/bookings.html">Bookings</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-bottom">&copy; 2024 Ayodhya Ramnagari Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
