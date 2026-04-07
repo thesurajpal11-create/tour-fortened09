@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# MySQL Database URL - Update with your credentials
-DATABASE_URL = "mysql+mysqlconnector://root:1234@localhost:3306/ayodhya_tourism"
+# SQLite Database URL for deployment
+DATABASE_URL = "sqlite:///./ayodhya_tourism.db"
 
 engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
