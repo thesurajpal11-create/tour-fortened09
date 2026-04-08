@@ -12,6 +12,7 @@ venv/
 .env/
 .venv/
 backend/venv/
+backend/.git/
 # Database files
 *.sqlite3
 *.db
