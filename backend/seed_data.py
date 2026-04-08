@@ -42,6 +42,34 @@ destinations = [
         "short_description": "Sacred pilgrimage site with Vishnupad Temple and spiritual significance",
         "image_url": "/images/gaya.jpg",
         "best_time_to_visit": "October to March"
+    },
+    {
+        "name": "Kashi",
+        "description": "Kashi is the ancient holy city on the banks of the Ganges, famous for evening aarti and spiritual rituals.",
+        "short_description": "Ancient holy city with the timeless Ganges aarti.",
+        "image_url": "https://content.skyscnr.com/m/26eaa06a2be696f0/original/GettyImages-525109131.jpg",
+        "best_time_to_visit": "October to December"
+    },
+    {
+        "name": "Vrindavan",
+        "description": "Vrindavan is a divine town dedicated to Lord Krishna, known for its temples and sacred gardens.",
+        "short_description": "Divine Krishna town with temples and spiritual gardens.",
+        "image_url": "https://www.makemytrip.com/tripideas/places/vrindavan",
+        "best_time_to_visit": "November to February"
+    },
+    {
+        "name": "Vidhyachal",
+        "description": "Vidhyachal is a historic spiritual retreat with ancient temples and scenic hills.",
+        "short_description": "Historic spiritual retreat with temples and panoramic views.",
+        "image_url": "https://www.captureatrip.com/blog/vindhyachal-temple",
+        "best_time_to_visit": "October to March"
+    },
+    {
+        "name": "Namshsiaryan",
+        "description": "Namshsiaryan is a sacred pilgrimage spot known for its spiritual heritage and peaceful atmosphere.",
+        "short_description": "A sacred pilgrimage site with rich cultural traditions.",
+        "image_url": "/images/tree-place.svg",
+        "best_time_to_visit": "October to March"
     }
 ]
 

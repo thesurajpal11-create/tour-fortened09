@@ -38,6 +38,18 @@ echo [Step 4] Installing Dependencies...
 pip install -r requirements.txt >nul 2>&1
 
 echo.
+echo [Step 5] Loading Environment Configuration...
+REM Load .env file if it exists
+if exist "..\\.env" (
+    for /f "tokens=*" %%a in ('type "..\\.env" ^| findstr /v "^#" ^| findstr /v "^$"') do (
+        set "%%a"
+    )
+    echo Environment variables loaded from .env
+) else (
+    echo WARNING: .env file not found. Make sure to set DATABASE_URL environment variable.
+)
+
+echo.
 echo ================================================
 echo   Starting Backend Server...
 echo ================================================

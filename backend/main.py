@@ -1,4 +1,6 @@
+import os
 from fastapi import FastAPI, APIRouter, Depends, HTTPException, status
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
@@ -19,6 +21,21 @@ Base.metadata.create_all(bind=engine)
 
 # Initialize FastAPI
 app = FastAPI(title="Ayodhya Ramnagari Tourism API", version="1.0.0")
+
+# CORS configuration
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "*")
+if allowed_origins.strip() == "*":
+    origins = ["*"]
+else:
+    origins = [origin.strip() for origin in allowed_origins.split(",") if origin.strip()]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Security
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

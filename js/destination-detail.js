@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const destination = await response.json();
 
         // Load destination details
+        const imageUrl = destination.image_url || '/images/tree-place.svg';
         const content = `
             <div class="destination-detail-header">
                 <h1>${destination.name}</h1>
@@ -24,11 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             <div class="destination-info">
                 <div class="destination-image-large">
-                    <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
-                                width: 100%; height: 400px; display: flex; align-items: center; 
-                                justify-content: center; font-size: 100px; border-radius: 10px;">
-                        ${destination.name.charAt(0)}
-                    </div>
+                    <img src="${imageUrl}" alt="${destination.name}" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" />
                 </div>
 
                 <div class="destination-description">

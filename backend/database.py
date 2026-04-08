@@ -1,9 +1,20 @@
+import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# SQLite Database URL for deployment
-DATABASE_URL = "sqlite:///./ayodhya_tourism.db"
+# Load environment variables from .env file
+load_dotenv()
+
+# Database URL is loaded from the environment for deployment stability.
+# For MySQL, use: mysql+pymysql://user:password@host:port/dbname
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise RuntimeError(
+        "DATABASE_URL environment variable is required.\n"
+        "Example: mysql+pymysql://user:password@localhost:3306/ayodhya_tourism"
+    )
 
 engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
