@@ -13,19 +13,17 @@
             <div class="logo">
                 <h1>🏛️ Ayodhya Ramnagari Tourism</h1>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pages/destinations.html">Destinations</a></li>
-                <li><a href="pages/bookings.html">Bookings</a></li>
+                <li><a href="pages/tour-packages.html">Tour Packages</a></li>
+                <li><a href="pages/hotels.html">Hotels</a></li>
+                <li><a href="pages/cab.html">Cab</a></li>
                 <li><a href="pages/contact.html">Contact</a></li>
-                <li id="authButtons">
-                    <a href="pages/login.html" class="btn-login">Login</a>
-                    <a href="pages/signup.html" class="btn-signup">Sign Up</a>
-                </li>
-                <li id="userProfile" style="display: none;">
-                    <a href="pages/profile.html" class="btn-profile">Profile</a>
-                    <button onclick="logout()" class="btn-logout">Logout</button>
-                </li>
             </ul>
         </div>
     </nav>
@@ -34,59 +32,9 @@
     <section class="hero">
         <div class="hero-content">
             <h2>Welcome to Ayodhya Ramnagari</h2>
+            <p class="slogan">The Spiritual Journey</p>
             <p>Explore the Sacred Pilgrimage Destinations of India</p>
-            <a href="pages/destinations.html" class="btn-primary">Explore Now</a>
-        </div>
-    </section>
-
-    <!-- Featured Destinations -->
-    <section class="featured-destinations">
-        <div class="container">
-            <h2>Featured Destinations</h2>
-            <div class="destinations-grid" id="featuredDestinations">
-                <!-- Destinations will be loaded here via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Tour Highlights Section -->
-    <section class="featured-destinations">
-        <div class="container">
-            <h2>Tour Highlights</h2>
-            <div class="destinations-grid">
-                <div class="destination-card">
-                    <img class="destination-image" src="/images/ayodhya.jpg" alt="Ayodhya" />
-                    <div class="destination-content">
-                        <h3>Ayodhya</h3>
-                        <p>Visit the sacred city of Lord Ram with historic temples and pilgrimage sites.</p>
-                        <a href="pages/destinations.html" class="btn-primary">Explore Ayodhya</a>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img class="destination-image" src="/images/chitrakoot.jpg" alt="Chitrakoot" />
-                    <div class="destination-content">
-                        <h3>Chitrakoot</h3>
-                        <p>Experience divine serenity at Chitrakoot, the land of Ram and Sita.</p>
-                        <a href="pages/destinations.html" class="btn-primary">Explore Chitrakoot</a>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img class="destination-image" src="/images/varanasi.jpg" alt="Varanasi" />
-                    <div class="destination-content">
-                        <h3>Varanasi</h3>
-                        <p>Walk the holy ghats of Varanasi and witness the spiritual heart of India.</p>
-                        <a href="pages/destinations.html" class="btn-primary">Explore Varanasi</a>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img class="destination-image" src="/images/tree-place.svg" alt="Tree Place" />
-                    <div class="destination-content">
-                        <h3>Tree Place</h3>
-                        <p>Discover special nature and sacred tree spots for calm and spiritual reflection.</p>
-                        <a href="pages/destinations.html" class="btn-primary">Explore Nature</a>
-                    </div>
-                </div>
-            </div>
+            <a href="pages/tour-packages.html" class="btn-primary">Explore Now</a>
         </div>
     </section>
 
@@ -95,23 +43,23 @@
         <div class="container">
             <h2>About Ayodhya Ramnagari Tourism</h2>
             <p>
-                Explore the most sacred and historic pilgrimage destinations in India. 
-                From the holy city of Ayodhya to the spiritual ghats of Varanasi, 
-                we offer unforgettable tourism experiences with comfortable accommodations, 
-                expert guides, and seamless booking services.
+                Welcome to Ayodhya Ramnagari Tourism, your gateway to India's most sacred pilgrimage destinations. 
+                We specialize in spiritual journeys that combine devotion, culture, and comfort. 
+                From the holy city of Ayodhya to the serene ghats of Varanasi, 
+                we offer unforgettable tourism experiences with comfortable accommodations, expert guides, and seamless booking services.
             </p>
             <div class="about-features">
                 <div class="feature">
                     <h3>🎯 Expert Guides</h3>
-                    <p>Knowledgeable guides for authentic experiences</p>
+                    <p>Knowledgeable guides for authentic spiritual experiences</p>
                 </div>
                 <div class="feature">
                     <h3>🛏️ Comfort Stays</h3>
-                    <p>Quality hotels and accommodations</p>
+                    <p>Quality hotels and accommodations near pilgrimage sites</p>
                 </div>
                 <div class="feature">
                     <h3>📱 Easy Booking</h3>
-                    <p>Simple and secure online booking system</p>
+                    <p>Simple and secure online booking system for all your needs</p>
                 </div>
             </div>
         </div>
@@ -125,7 +73,7 @@
                     <h4>Contact Us</h4>
                     <p>📞 Phone: 7607745628</p>
                     <p>💬 WhatsApp: 7607745628</p>
-                    <p>📧 Email: info@ayodhyaramnagari.com</p>
+                    <p>📧 Email: <a href="mailto:ayodhyaramnagritourism@gmail.com">ayodhyaramnagritourism@gmail.com</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Follow Us</h4>
@@ -137,9 +85,9 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="pages/destinations.html">Destinations</a></li>
-                        <li><a href="pages/bookings.html">Bookings</a></li>
-                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/tour-packages.html">Tour Packages</a></li>
+                        <li><a href="pages/hotels.html">Hotels</a></li>
+                        <li><a href="pages/cab.html">Cab</a></li>
                     </ul>
                 </div>
             </div>

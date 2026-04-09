@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Request - Ayodhya Ramnagari Tourism</title>
+    <title>Cab Services - Ayodhya Ramnagari Tourism</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -16,29 +16,40 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="tour-packages.html">Tour Packages</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
-                <li><a href="cab.html">Cab</a></li>
+                <li><a href="cab.html" class="active">Cab</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="bookings-section">
+    <section class="cab-section">
         <div class="container">
-            <h1>Booking Request</h1>
-            <p class="section-subtitle">Fill in your details and we will contact you for booking confirmation.</p>
-            <div class="booking-form-container">
-                <div class="google-form-note">
-                    <h3>Submit Your Booking Request</h3>
-                    <p>Fill out the Google Form below. We'll receive your request via email and contact you within 24 hours.</p>
-                    <p><strong>To enable email notifications:</strong> In Google Forms, go to Responses → More (⋮) → Get email notifications for new responses.</p>
+            <h1>Cab & Transportation</h1>
+            <p class="section-subtitle">Choose the right vehicle for your journey.</p>
+            <div class="cab-grid">
+                <div class="cab-card">
+                    <h3>4-Seater Sedan</h3>
+                    <p>Comfortable for small families and small groups.</p>
+                    <p><strong>Best for:</strong> City transfers and nearby tours.</p>
                 </div>
-                <div class="google-form-embed">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScR0H14GcH_mfEFD9iTZ1brmyatmMWBdzgrWkT0yHqrpHXnGg/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">Loading booking form...</iframe>
+                <div class="cab-card">
+                    <h3>7-Seater SUV</h3>
+                    <p>More space for luggage and family travel.</p>
+                    <p><strong>Best for:</strong> Group travel and temple site tours.</p>
                 </div>
-                <div class="form-alternative">
-                    <p>Can't see the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLScR0H14GcH_mfEFD9iTZ1brmyatmMWBdzgrWkT0yHqrpHXnGg/viewform" target="_blank">Open in new tab</a></p>
-                    <p>Or email us directly: <a href="mailto:ayodhyaramnagritourism@gmail.com">ayodhyaramnagritourism@gmail.com</a></p>
+                <div class="cab-card">
+                    <h3>Mini Bus</h3>
+                    <p>Good for medium groups, includes non-AC and AC options.</p>
+                    <p><strong>Best for:</strong> Multiple pilgrims traveling together.</p>
                 </div>
+                <div class="cab-card">
+                    <h3>AC Coach / Bus</h3>
+                    <p>Perfect for larger groups and long-distance journeys.</p>
+                    <p><strong>Best for:</strong> Pilgrimage group travel between cities.</p>
+                </div>
+            </div>
+            <div class="cab-note">
+                <p>You can book any vehicle type from the <a href="bookings.html">booking request page</a>.</p>
             </div>
         </div>
     </section>
@@ -57,8 +68,5 @@
             <p class="footer-bottom">&copy; 2024 Ayodhya Ramnagari Tourism. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="/js/main.js"></script>
-    <script src="/js/bookings.js"></script>
 </body>
 </html>

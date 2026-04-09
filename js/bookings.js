@@ -1,109 +1,60 @@
-// Bookings functions
+// Booking request functions
+
 document.addEventListener('DOMContentLoaded', () => {
     const bookingForm = document.getElementById('bookingForm');
-    
     if (bookingForm) {
         bookingForm.addEventListener('submit', handleBooking);
     }
-
-    const token = localStorage.getItem('token');
-    if (!token) {
-        const bookingForm = document.getElementById('bookingForm');
-        if (bookingForm) {
-            bookingForm.style.display = 'none';
-            document.querySelector('.booking-form-container').innerHTML += 
-                '<p style="color: red;">Please <a href="login.html">login</a> to make a booking.</p>';
-        }
-    }
-
-    loadUserBookings();
 });
 
-async function handleBooking(e) {
+function handleBooking(e) {
     e.preventDefault();
 
-    const token = localStorage.getItem('token');
-    if (!token) {
-        showMessage('bookingMessage', 'Please login first', 'error');
+    const fullName = document.getElementById('full_name').value.trim();
+    const contactNumber = document.getElementById('contact_number').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const pickupLocation = document.getElementById('pickup_location').value.trim();
+    const dropLocation = document.getElementById('drop_location').value.trim();
+    const startDate = document.getElementById('start_date').value;
+    const packageType = document.getElementById('package_type').value;
+    const hotelRating = document.getElementById('hotel_rating').value;
+    const roomType = document.getElementById('room_type').value;
+    const cabType = document.getElementById('cab_type').value;
+    const karmakandService = document.getElementById('karmakand_service').value;
+
+    if (!fullName || !contactNumber || !email || !pickupLocation || !dropLocation || !startDate || !packageType || !hotelRating || !roomType || !cabType || !karmakandService) {
+        showMessage('bookingMessage', 'Please fill in all required booking fields.', 'error');
         return;
     }
 
-    const destination_id = document.getElementById('destination').value;
-    const service_type = document.getElementById('service_type').value;
-    const check_in = document.getElementById('check_in').value;
-    const check_out = document.getElementById('check_out').value;
-    const number_of_people = document.getElementById('people').value;
+    const bookingDetails = {
+        fullName,
+        contactNumber,
+        email,
+        pickupLocation,
+        dropLocation,
+        startDate,
+        packageType,
+        hotelRating,
+        roomType,
+        cabType,
+        karmakandService
+    };
 
-    try {
-        const response = await fetch(`${API_BASE_URL}/bookings`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify({
-                destination_id: parseInt(destination_id),
-                service_type: service_type,
-                check_in_date: new Date(check_in).toISOString(),
-                check_out_date: new Date(check_out).toISOString(),
-                number_of_people: parseInt(number_of_people),
-                total_price: 5000 // This should be calculated from service price
-            })
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            showMessage('bookingMessage', 'Booking created successfully!', 'success');
-            document.getElementById('bookingForm').reset();
-            loadUserBookings();
-        } else {
-            showMessage('bookingMessage', data.detail || 'Booking failed', 'error');
-        }
-    } catch (error) {
-        console.error('Booking error:', error);
-        showMessage('bookingMessage', 'Error creating booking. Please try again.', 'error');
-    }
+    console.log('Booking request submitted:', bookingDetails);
+    showMessage('bookingMessage', 'Your booking request has been submitted. We will contact you shortly at ' + email + '.', 'success');
+    document.getElementById('bookingForm').reset();
 }
 
-async function loadUserBookings() {
-    const token = localStorage.getItem('token');
-    if (!token) return;
+function showMessage(elementId, message, type) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
 
-    try {
-        const response = await fetch(`${API_BASE_URL}/bookings`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
+    element.textContent = message;
+    element.className = type;
+    element.style.display = 'block';
 
-        const bookings = await response.json();
-        const container = document.getElementById('userBookings');
-        
-        if (!container) return;
-
-        if (bookings.length === 0) {
-            container.innerHTML = '<p>No bookings yet. <a href="destinations.html">Book a tour now!</a></p>';
-            return;
-        }
-
-        container.innerHTML = '';
-        bookings.forEach(booking => {
-            const item = document.createElement('div');
-            item.className = 'booking-item';
-            item.innerHTML = `
-                <h3>Booking ID: ${booking.id}</h3>
-                <p><strong>Destination:</strong> ${booking.destination_id}</p>
-                <p><strong>Service:</strong> ${booking.service_type}</p>
-                <p><strong>Check-in:</strong> ${new Date(booking.check_in_date).toLocaleDateString()}</p>
-                <p><strong>Check-out:</strong> ${new Date(booking.check_out_date).toLocaleDateString()}</p>
-                <p><strong>People:</strong> ${booking.number_of_people}</p>
-                <p><strong>Total Price:</strong> ₹${booking.total_price}</p>
-                <span class="booking-status status-${booking.status}">${booking.status.toUpperCase()}</span>
-            `;
-            container.appendChild(item);
-        });
-    } catch (error) {
-        console.error('Error loading bookings:', error);
-    }
+    setTimeout(() => {
+        element.style.display = 'none';
+    }, 6000);
 }

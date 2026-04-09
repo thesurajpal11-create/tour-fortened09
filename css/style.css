@@ -66,6 +66,23 @@ body {
     opacity: 0.7;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
 .btn-login, .btn-signup {
     padding: 8px 15px;
     border-radius: 5px;
@@ -105,6 +122,13 @@ body {
 .hero-content h2 {
     font-size: 42px;
     margin-bottom: 20px;
+}
+
+.hero-content .slogan {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--accent-color);
 }
 
 .hero-content p {
@@ -204,6 +228,43 @@ h1, h2 {
     border-radius: 10px;
 }
 
+/* Tour Packages */
+.tour-packages {
+    padding: 60px 20px;
+    background: var(--white);
+}
+
+.packages-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.package-card {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.package-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.package-card p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.package-card .price {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
 /* Forms */
 .auth-container,
 .contact-info,
@@ -260,13 +321,42 @@ h1, h2 {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
     .nav-links {
-        flex-wrap: wrap;
-        gap: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
     }
 
     .hero-content h2 {
         font-size: 28px;
+    }
+
+    .hero-content .slogan {
+        font-size: 18px;
     }
 
     .hero-content p {
@@ -278,6 +368,10 @@ h1, h2 {
     }
 
     .destination-info {
+        grid-template-columns: 1fr;
+    }
+
+    .packages-grid {
         grid-template-columns: 1fr;
     }
 }

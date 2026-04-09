@@ -34,26 +34,12 @@ const fallbackDestinations = [
 
 // Check if user is logged in
 function checkAuthStatus() {
-    const token = localStorage.getItem('token');
-    const user = localStorage.getItem('user');
-    const authButtons = document.getElementById('authButtons');
-    const userProfile = document.getElementById('userProfile');
-
-    if (token && user) {
-        if (authButtons) authButtons.style.display = 'none';
-        if (userProfile) userProfile.style.display = 'block';
-    } else {
-        if (authButtons) authButtons.style.display = 'block';
-        if (userProfile) userProfile.style.display = 'none';
-    }
+    // Auth removed
 }
 
 // Logout function
 function logout() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    checkAuthStatus();
-    window.location.href = '../index.html';
+    // Auth removed
 }
 
 function enhanceContactLinks() {
@@ -208,18 +194,22 @@ function showMessage(elementId, message, type) {
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
-    checkAuthStatus();
+    // Auth removed
     enhanceContactLinks();
     
-    if (document.getElementById('featuredDestinations')) {
-        loadFeaturedDestinations();
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     }
     
-    if (document.getElementById('allDestinations')) {
-        loadAllDestinations();
-    }
+    // Removed loadFeaturedDestinations
     
-    if (document.getElementById('destination')) {
-        loadDestinationsDropdown();
-    }
+    // Removed loadAllDestinations
+    
+    // Removed loadDestinationsDropdown
 });
