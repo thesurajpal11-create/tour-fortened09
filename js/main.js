@@ -1,5 +1,5 @@
-// API Base URL
-const API_BASE_URL = 'http://localhost:8000/api';
+// API Base URL - Update this with your deployed backend URL after deployment
+const API_BASE_URL = 'https://your-backend-app.onrender.com/api';
 const CONTACT_PHONE = '+917607745628';
 const CONTACT_WHATSAPP = '+917607745628';
 const CONTACT_EMAIL = 'info@ayodhyaramnagari.com';
