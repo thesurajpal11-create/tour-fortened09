@@ -1,215 +1,174 @@
-// API Base URL - Update this with your deployed backend URL after deployment
-const API_BASE_URL = 'https://your-backend-app.onrender.com/api';
-const CONTACT_PHONE = '+917607745628';
-const CONTACT_WHATSAPP = '+917607745628';
-const CONTACT_EMAIL = 'info@ayodhyaramnagari.com';
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+const topSlider = document.querySelector(".top-slider");
+const topSlides = document.querySelectorAll(".top-slide");
+const sliderDots = document.querySelectorAll(".slider-dot");
+const sliderPrev = document.getElementById("sliderPrev");
+const sliderNext = document.getElementById("sliderNext");
+const enquiryForm = document.getElementById("enquiryForm");
+const formFeedback = document.getElementById("formFeedback");
+const currentYear = document.getElementById("currentYear");
+const pickupDate = document.getElementById("pickupDate");
 
-const priorityDestinationNames = ['Kashi', 'Vrindavan', 'Vidhyachal', 'Namshsiaryan'];
-const fallbackDestinations = [
-    {
-        name: 'Kashi',
-        short_description: 'Ancient holy city on the Ganges, famous for its evening aarti rituals.',
-        rating: 4.9,
-        image_url: 'https://content.skyscnr.com/m/26eaa06a2be696f0/original/GettyImages-525109131.jpg'
-    },
-    {
-        name: 'Vrindavan',
-        short_description: 'Divine town of Lord Krishna with beautiful temples and gardens.',
-        rating: 4.8,
-        image_url: 'https://www.makemytrip.com/tripideas/places/vrindavan'
-    },
-    {
-        name: 'Vidhyachal',
-        short_description: 'Historic spiritual retreat known for temples and scenic hills.',
-        rating: 4.7,
-        image_url: 'https://www.captureatrip.com/blog/vindhyachal-temple'
-    },
-    {
-        name: 'Namshsiaryan',
-        short_description: 'Discover a sacred pilgrimage site with rich spiritual traditions.',
-        rating: 4.8,
-        image_url: '/images/tree-place.svg'
-    }
-];
+let currentSlideIndex = 0;
+let sliderIntervalId = null;
 
-// Check if user is logged in
-function checkAuthStatus() {
-    // Auth removed
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
 }
 
-// Logout function
-function logout() {
-    // Auth removed
+if (pickupDate) {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    pickupDate.min = `${year}-${month}-${day}`;
 }
 
-function enhanceContactLinks() {
-    document.querySelectorAll('p').forEach(p => {
-        const text = p.textContent.trim();
-
-        if (text.includes('📞 Phone: 7607745628')) {
-            p.innerHTML = `📞 Phone: <a href="tel:${CONTACT_PHONE}">7607745628</a>`;
-        }
-
-        if (text.includes('💬 WhatsApp: 7607745628')) {
-            p.innerHTML = `💬 WhatsApp: <a href="https://wa.me/${CONTACT_WHATSAPP.replace('+', '')}" target="_blank" rel="noopener">Chat on WhatsApp</a>`;
-        }
-
-        if (text.includes('📧 Email: info@ayodhyaramnagari.com')) {
-            p.innerHTML = `📧 Email: <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>`;
-        }
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
     });
 }
 
-function normalizeDestinations(destinations) {
-    const destinationMap = new Map(destinations.map(dest => [dest.name, dest]));
-    const normalized = [];
-
-    priorityDestinationNames.forEach(name => {
-        if (destinationMap.has(name)) {
-            normalized.push(destinationMap.get(name));
-            destinationMap.delete(name);
-        } else {
-            const fallback = fallbackDestinations.find(item => item.name === name);
-            if (fallback) normalized.push(fallback);
-        }
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+        navToggle?.setAttribute("aria-expanded", "false");
     });
-
-    destinationMap.forEach(dest => normalized.push(dest));
-    return normalized;
-}
-
-// Load featured destinations
-async function loadFeaturedDestinations() {
-    try {
-        const response = await fetch(`${API_BASE_URL}/destinations`);
-        const destinations = await response.json();
-        
-        const container = document.getElementById('featuredDestinations');
-        if (!container) return;
-
-        const allDestinations = normalizeDestinations(destinations);
-        container.innerHTML = '';
-        allDestinations.slice(0, 3).forEach(dest => {
-            const card = createDestinationCard(dest);
-            container.appendChild(card);
-        });
-    } catch (error) {
-        console.error('Error loading destinations:', error);
-
-        const container = document.getElementById('featuredDestinations');
-        if (!container) return;
-
-        container.innerHTML = '';
-        fallbackDestinations.slice(0, 3).forEach(dest => {
-            const card = createDestinationCard(dest);
-            container.appendChild(card);
-        });
-    }
-}
-
-// Create destination card element
-function createDestinationCard(destination) {
-    const card = document.createElement('div');
-    card.className = 'destination-card';
-    const rating = destination.rating || 4.7;
-    const imageUrl = destination.image_url || '/images/tree-place.svg';
-    const detailsUrl = destination.id ? `pages/destination-detail.html?id=${destination.id}` : 'pages/destinations.html';
-
-    card.innerHTML = `
-        <img class="destination-image" src="${imageUrl}" alt="${destination.name}" />
-        <div class="destination-content">
-            <h3>${destination.name}</h3>
-            <p>${destination.short_description || 'Explore a beautiful pilgrimage destination.'}</p>
-            <div class="destination-rating">
-                <span class="stars">★★★★★ ${rating}</span>
-            </div>
-            <a href="${detailsUrl}" class="btn-primary">View Details</a>
-        </div>
-    `;
-    return card;
-}
-
-// Load all destinations
-async function loadAllDestinations() {
-    try {
-        const response = await fetch(`${API_BASE_URL}/destinations`);
-        const destinations = await response.json();
-        
-        const container = document.getElementById('allDestinations');
-        if (!container) return;
-
-        const allDestinations = normalizeDestinations(destinations);
-        container.innerHTML = '';
-        allDestinations.forEach(dest => {
-            const card = createDestinationCard(dest);
-            container.appendChild(card);
-        });
-    } catch (error) {
-        console.error('Error loading destinations:', error);
-
-        const container = document.getElementById('allDestinations');
-        if (!container) return;
-
-        container.innerHTML = '';
-        fallbackDestinations.forEach(dest => {
-            const card = createDestinationCard(dest);
-            container.appendChild(card);
-        });
-    }
-}
-
-// Load destinations dropdown for booking
-async function loadDestinationsDropdown() {
-    try {
-        const response = await fetch(`${API_BASE_URL}/destinations`);
-        const destinations = await response.json();
-        
-        const select = document.getElementById('destination');
-        if (!select) return;
-
-        destinations.forEach(dest => {
-            const option = document.createElement('option');
-            option.value = dest.id;
-            option.textContent = dest.name;
-            select.appendChild(option);
-        });
-    } catch (error) {
-        console.error('Error loading destinations:', error);
-    }
-}
-
-// Show message
-function showMessage(elementId, message, type) {
-    const element = document.getElementById(elementId);
-    if (!element) return;
-
-    element.textContent = message;
-    element.className = type; // 'success' or 'error'
-    element.style.display = 'block';
-    
-    setTimeout(() => {
-        element.style.display = 'none';
-    }, 5000);
-}
-
-// Initialize the page
-document.addEventListener('DOMContentLoaded', () => {
-    // Auth removed
-    enhanceContactLinks();
-    
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
-    
-    // Removed loadFeaturedDestinations
-    
-    // Removed loadAllDestinations
-    
-    // Removed loadDestinationsDropdown
 });
+
+function showSlide(index) {
+    if (!topSlides.length) {
+        return;
+    }
+
+    currentSlideIndex = (index + topSlides.length) % topSlides.length;
+
+    topSlides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("is-active", slideIndex === currentSlideIndex);
+    });
+
+    sliderDots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("is-active", dotIndex === currentSlideIndex);
+    });
+}
+
+function nextSlide() {
+    showSlide(currentSlideIndex + 1);
+}
+
+function previousSlide() {
+    showSlide(currentSlideIndex - 1);
+}
+
+function startSlider() {
+    if (!topSlides.length) {
+        return;
+    }
+
+    stopSlider();
+    sliderIntervalId = window.setInterval(nextSlide, 3500);
+}
+
+function stopSlider() {
+    if (sliderIntervalId) {
+        window.clearInterval(sliderIntervalId);
+        sliderIntervalId = null;
+    }
+}
+
+if (topSlider && topSlides.length) {
+    showSlide(0);
+    startSlider();
+
+    sliderPrev?.addEventListener("click", () => {
+        previousSlide();
+        startSlider();
+    });
+
+    sliderNext?.addEventListener("click", () => {
+        nextSlide();
+        startSlider();
+    });
+
+    sliderDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showSlide(index);
+            startSlider();
+        });
+    });
+
+    topSlider.addEventListener("mouseenter", stopSlider);
+    topSlider.addEventListener("mouseleave", startSlider);
+}
+
+function setFeedback(message, type) {
+    if (!formFeedback) {
+        return;
+    }
+
+    formFeedback.textContent = message;
+    formFeedback.className = `form-feedback ${type}`;
+}
+
+function validateField(field) {
+    const value = field.value.trim();
+    field.classList.remove("input-error");
+
+    if (field.hasAttribute("required") && !value) {
+        field.classList.add("input-error");
+        return false;
+    }
+
+    if (field.type === "email" && value) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(value)) {
+            field.classList.add("input-error");
+            return false;
+        }
+    }
+
+    if (field.type === "tel" && value) {
+        const digits = value.replace(/\D/g, "");
+        if (digits.length < 10) {
+            field.classList.add("input-error");
+            return false;
+        }
+    }
+
+    return true;
+}
+
+if (enquiryForm) {
+    enquiryForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const fields = enquiryForm.querySelectorAll("input, select, textarea");
+        let isValid = true;
+
+        fields.forEach((field) => {
+            const fieldIsValid = validateField(field);
+            if (!fieldIsValid) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            setFeedback("Please fill all required fields with valid details.", "error");
+            return;
+        }
+
+        setFeedback("Your enquiry has been submitted. Our team will contact you soon.", "success");
+        enquiryForm.reset();
+
+        if (pickupDate) {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, "0");
+            const day = String(today.getDate()).padStart(2, "0");
+            pickupDate.min = `${year}-${month}-${day}`;
+        }
+    });
+}
