@@ -73,12 +73,24 @@
                     </div>
                 </div>
 
-                <form class="enquiry-form" id="enquiryForm" novalidate>
+                <form
+                    class="enquiry-form"
+                    id="enquiryForm"
+                    method="POST"
+                    action="https://formsubmit.co/ayodhyaramnagritourism@gmail.com"
+                    data-formsubmit="true"
+                    novalidate
+                >
                     <h2>Send Enquiry</h2>
+                    <input type="hidden" name="_subject" value="New Tour &amp; Travel Enquiry">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://thesurajpal11-create.github.io/tour-fortened09/thank-you.html">
+                    <input type="hidden" name="_url" value="https://thesurajpal11-create.github.io/tour-fortened09/pages/contact.html">
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" required>
+                            <input type="text" id="fullName" name="full_name" required>
                         </div>
                         <div class="form-group">
                             <label for="mobile">Mobile</label>

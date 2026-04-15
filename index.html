@@ -204,12 +204,24 @@
 
         <section class="enquiry section" id="enquiry">
             <div class="container enquiry-layout">
-                <form class="enquiry-form" id="enquiryForm" novalidate>
+                <form
+                    class="enquiry-form"
+                    id="enquiryForm"
+                    method="POST"
+                    action="https://formsubmit.co/ayodhyaramnagritourism@gmail.com"
+                    data-formsubmit="true"
+                    novalidate
+                >
                     <h2>Quick Enquiry</h2>
+                    <input type="hidden" name="_subject" value="New Tour &amp; Travel Enquiry">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://thesurajpal11-create.github.io/tour-fortened09/thank-you.html">
+                    <input type="hidden" name="_url" value="https://thesurajpal11-create.github.io/tour-fortened09/index.html">
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" required>
+                            <input type="text" id="fullName" name="full_name" required>
                         </div>
                         <div class="form-group">
                             <label for="mobile">Mobile</label>
@@ -221,19 +233,19 @@
                         </div>
                         <div class="form-group">
                             <label for="pickupDate">Pickup Date</label>
-                            <input type="date" id="pickupDate" name="pickupDate" required>
+                            <input type="date" id="pickupDate" name="pickup_date" required>
                         </div>
                         <div class="form-group">
                             <label for="pickupPlace">Pickup Place</label>
-                            <input type="text" id="pickupPlace" name="pickupPlace" required>
+                            <input type="text" id="pickupPlace" name="pickup_place" required>
                         </div>
                         <div class="form-group">
                             <label for="destinationPlace">Destination</label>
-                            <input type="text" id="destinationPlace" name="destinationPlace" required>
+                            <input type="text" id="destinationPlace" name="destination" required>
                         </div>
                         <div class="form-group">
                             <label for="vehicleType">Vehicle Type</label>
-                            <select id="vehicleType" name="vehicleType" required>
+                            <select id="vehicleType" name="vehicle_type" required>
                                 <option value="">Select vehicle</option>
                                 <option>Sedan</option>
                                 <option>SUV</option>
@@ -243,7 +255,7 @@
                         </div>
                         <div class="form-group">
                             <label for="hotelType">Hotel Type</label>
-                            <select id="hotelType" name="hotelType">
+                            <select id="hotelType" name="hotel_type">
                                 <option value="">Select hotel type</option>
                                 <option>Budget</option>
                                 <option>Standard</option>
