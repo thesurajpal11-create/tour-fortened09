@@ -5,8 +5,7 @@ const topSlides = document.querySelectorAll(".top-slide");
 const sliderDots = document.querySelectorAll(".slider-dot");
 const sliderPrev = document.getElementById("sliderPrev");
 const sliderNext = document.getElementById("sliderNext");
-const enquiryForm = document.getElementById("enquiryForm");
-const formFeedback = document.getElementById("formFeedback");
+const enquiryForms = document.querySelectorAll(".enquiry-form");
 const currentYear = document.getElementById("currentYear");
 const pickupDate = document.getElementById("pickupDate");
 
@@ -104,7 +103,9 @@ if (topSlider && topSlides.length) {
     topSlider.addEventListener("mouseleave", startSlider);
 }
 
-function setFeedback(message, type) {
+function setFeedback(form, message, type) {
+    const formFeedback = form.querySelector(".form-feedback");
+
     if (!formFeedback) {
         return;
     }
@@ -141,7 +142,7 @@ function validateField(field) {
     return true;
 }
 
-if (enquiryForm) {
+enquiryForms.forEach((enquiryForm) => {
     enquiryForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
@@ -156,19 +157,12 @@ if (enquiryForm) {
         });
 
         if (!isValid) {
-            setFeedback("Please fill all required fields with valid details.", "error");
+            setFeedback(enquiryForm, "Please fill all required fields with valid details.", "error");
             return;
         }
 
-        setFeedback("Your enquiry has been submitted. Our team will contact you soon.", "success");
-        enquiryForm.reset();
-
-        if (pickupDate) {
-            const today = new Date();
-            const year = today.getFullYear();
-            const month = String(today.getMonth() + 1).padStart(2, "0");
-            const day = String(today.getDate()).padStart(2, "0");
-            pickupDate.min = `${year}-${month}-${day}`;
-        }
+        // Preserve the current validation UX, then allow FormSubmit to send the form.
+        setFeedback(enquiryForm, "Submitting your enquiry...", "success");
+        enquiryForm.submit();
     });
-}
+});
