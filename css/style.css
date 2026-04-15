@@ -218,6 +218,7 @@ button {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-left: auto;
 }
 
 .nav-menu a {
@@ -245,6 +246,7 @@ button {
     border-radius: 12px;
     background: #fff;
     padding: 0;
+    margin-left: auto;
 }
 
 .nav-toggle span {
@@ -720,8 +722,9 @@ button {
     .nav-menu {
         position: fixed;
         top: 82px;
-        left: 16px;
         right: 16px;
+        left: auto;
+        width: min(320px, calc(100vw - 32px));
         padding: 1rem;
         background: #ffffff;
         border-radius: 18px;
