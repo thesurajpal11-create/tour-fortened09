@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thesurajpal11-create.github.io/tour-fortened09/sitemap.xml
