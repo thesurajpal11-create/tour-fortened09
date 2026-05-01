@@ -8,6 +8,42 @@ const sliderNext = document.getElementById("sliderNext");
 const enquiryForms = document.querySelectorAll(".enquiry-form");
 const currentYear = document.getElementById("currentYear");
 const pickupDate = document.getElementById("pickupDate");
+const reviewForm = document.getElementById("reviewForm");
+const reviewList = document.getElementById("reviewList");
+const reviewSummary = document.getElementById("reviewSummary");
+const reviewFeedback = document.getElementById("reviewFeedback");
+const reviewsStorageKey = "ramnagariTourismReviews";
+const reviewsSeededKey = "ramnagariTourismReviewsSeeded";
+const defaultReviews = [
+    {
+        id: 1704101400001,
+        name: "Amit Sharma",
+        rating: 5,
+        message: "Ramnagari Tourism planned our Ayodhya trip very well. Cab was clean, driver was polite, and the whole family felt comfortable.",
+        createdAt: "2026-04-18T10:30:00.000Z",
+    },
+    {
+        id: 1704101400002,
+        name: "Priya Verma",
+        rating: 5,
+        message: "Very smooth service for darshan and local sightseeing. The team responded quickly and helped us with hotel and cab details.",
+        createdAt: "2026-04-21T12:15:00.000Z",
+    },
+    {
+        id: 1704101400003,
+        name: "Sandeep Gupta",
+        rating: 4,
+        message: "Good tour package and transparent pricing. Our Prayagraj route was managed nicely and pickup was on time.",
+        createdAt: "2026-04-24T15:20:00.000Z",
+    },
+    {
+        id: 1704101400004,
+        name: "Neha Singh",
+        rating: 5,
+        message: "Best travel support for a family trip. Booking was simple and the driver knew the temple routes very well.",
+        createdAt: "2026-04-27T09:10:00.000Z",
+    },
+];
 
 let currentSlideIndex = 0;
 let sliderIntervalId = null;
@@ -166,3 +202,126 @@ enquiryForms.forEach((enquiryForm) => {
         enquiryForm.submit();
     });
 });
+
+function getSavedReviews() {
+    try {
+        const savedReviews = JSON.parse(localStorage.getItem(reviewsStorageKey) || "[]");
+        return Array.isArray(savedReviews) ? savedReviews : [];
+    } catch (error) {
+        return [];
+    }
+}
+
+function saveReviews(reviews) {
+    localStorage.setItem(reviewsStorageKey, JSON.stringify(reviews));
+}
+
+function seedDefaultReviews() {
+    if (localStorage.getItem(reviewsSeededKey) === "true") {
+        return;
+    }
+
+    const savedReviews = getSavedReviews();
+    const savedReviewIds = new Set(savedReviews.map((review) => review.id));
+    const missingDefaultReviews = defaultReviews.filter((review) => !savedReviewIds.has(review.id));
+    saveReviews([...missingDefaultReviews, ...savedReviews]);
+
+    localStorage.setItem(reviewsSeededKey, "true");
+}
+
+function escapeReviewText(value) {
+    return value.replace(/[&<>"']/g, (character) => {
+        const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            "\"": "&quot;",
+            "'": "&#039;",
+        };
+        return entities[character];
+    });
+}
+
+function renderReviews() {
+    if (!reviewList || !reviewSummary) {
+        return;
+    }
+
+    const reviews = getSavedReviews();
+
+    if (!reviews.length) {
+        reviewSummary.textContent = "No reviews yet.";
+        reviewList.innerHTML = "";
+        return;
+    }
+
+    const averageRating = reviews.reduce((total, review) => total + review.rating, 0) / reviews.length;
+    reviewSummary.textContent = `${averageRating.toFixed(1)} out of 5 from ${reviews.length} review${reviews.length === 1 ? "" : "s"}`;
+    reviewList.innerHTML = reviews
+        .map((review) => {
+            const reviewDate = new Date(review.createdAt).toLocaleDateString("en-IN", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+            });
+
+            return `
+                <article class="review-card">
+                    <div class="review-card-header">
+                        <h3>${escapeReviewText(review.name)}</h3>
+                        <span class="review-stars" aria-label="${review.rating} out of 5 stars">${review.rating}/5</span>
+                    </div>
+                    <p>${escapeReviewText(review.message)}</p>
+                    <span class="review-date">${reviewDate}</span>
+                </article>
+            `;
+        })
+        .join("");
+}
+
+if (reviewForm) {
+    seedDefaultReviews();
+    renderReviews();
+
+    reviewForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const nameInput = reviewForm.querySelector("#reviewName");
+        const ratingInput = reviewForm.querySelector("#reviewRating");
+        const messageInput = reviewForm.querySelector("#reviewMessage");
+        const fields = [nameInput, ratingInput, messageInput];
+        let isValid = true;
+
+        fields.forEach((field) => {
+            if (field && !validateField(field)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            if (reviewFeedback) {
+                reviewFeedback.textContent = "Please write your name, rating, and review.";
+                reviewFeedback.className = "form-feedback error";
+            }
+            return;
+        }
+
+        const reviews = getSavedReviews();
+        reviews.unshift({
+            id: Date.now(),
+            name: nameInput.value.trim(),
+            rating: Number(ratingInput.value),
+            message: messageInput.value.trim(),
+            createdAt: new Date().toISOString(),
+        });
+        saveReviews(reviews);
+        renderReviews();
+
+        if (reviewFeedback) {
+            reviewFeedback.textContent = "Review saved and sending to Ramnagari Tourism...";
+            reviewFeedback.className = "form-feedback success";
+        }
+
+        reviewForm.submit();
+    });
+}
