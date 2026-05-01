@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tour | Ramnagari Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container nav-inner">
+                <a href="../index.html" class="brand">
+                    <span class="brand-mark">
+                        <img src="../images/logo.jpeg" alt="Ramnagari Tourism logo" class="brand-logo" onerror="this.style.display='none'">
+                        <span class="brand-fallback">RT</span>
+                    </span>
+                    <span class="brand-text">
+                        <strong>Ramnagari Tourism</strong>
+                        <small>Secure Tour Booking</small>
+                    </span>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="../index.html">Home</a>
+                    <a href="destinations.html">Destination</a>
+                    <a href="tour-packages.html">Tour Packages</a>
+                    <a href="hotels.html">Hotels</a>
+                    <a href="booking.html">Book & Pay</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner booking-banner">
+            <div class="container page-banner-content">
+                <span class="section-script">Book & Pay</span>
+                <h1>Login, choose your package, and pay advance securely.</h1>
+                <p>Hotel names remain private. You select by category, price, distance, and comfort details.</p>
+            </div>
+        </section>
+
+        <section class="section booking-section">
+            <div class="container booking-layout">
+                <div class="content-card booking-card">
+                    <div class="booking-tabs" role="tablist" aria-label="Customer access">
+                        <button type="button" class="booking-tab is-active" id="loginTab">Login</button>
+                        <button type="button" class="booking-tab" id="signupTab">Sign Up</button>
+                    </div>
+
+                    <form class="booking-form" id="loginForm">
+                        <h2>Customer Login</h2>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" id="loginEmail" autocomplete="email" required>
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password" id="loginPassword" autocomplete="current-password" required>
+                        </label>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+
+                    <form class="booking-form is-hidden" id="signupForm">
+                        <h2>Create Account</h2>
+                        <label>
+                            <span>Name</span>
+                            <input type="text" id="signupName" autocomplete="name" required>
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" id="signupEmail" autocomplete="email" required>
+                        </label>
+                        <label>
+                            <span>Phone</span>
+                            <input type="tel" id="signupPhone" autocomplete="tel">
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password" id="signupPassword" autocomplete="new-password" required>
+                        </label>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                    <p class="booking-message" id="authMessage" aria-live="polite"></p>
+                </div>
+
+                <form class="content-card booking-card booking-form" id="bookingForm">
+                    <h2>Trip Details</h2>
+                    <div class="booking-two-fields">
+                        <label>
+                            <span>Destination</span>
+                            <select id="destinationSelect" required></select>
+                        </label>
+                        <label>
+                            <span>Hotel Type</span>
+                            <select id="hotelCategorySelect" required>
+                                <option value="Budget">Budget</option>
+                                <option value="2 Star">2 Star</option>
+                                <option value="3 Star">3 Star</option>
+                                <option value="4 Star">4 Star</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label>
+                        <span>Hotel Option</span>
+                        <select id="hotelOptionSelect">
+                            <option value="">Best available option</option>
+                        </select>
+                    </label>
+                    <div class="booking-two-fields">
+                        <label>
+                            <span>Cab Type</span>
+                            <select id="cabTypeSelect" required></select>
+                        </label>
+                        <label>
+                            <span>Tourists</span>
+                            <input type="number" id="touristsInput" min="1" value="2" required>
+                        </label>
+                    </div>
+                    <label>
+                        <span>Stay Days</span>
+                        <input type="number" id="stayDaysInput" min="1" value="1" required>
+                    </label>
+                    <div class="booking-actions">
+                        <button type="button" class="btn btn-secondary" id="estimateButton">Get Estimate</button>
+                        <button type="submit" class="btn btn-primary" id="bookButton">Create Booking</button>
+                    </div>
+                    <p class="booking-message" id="bookingMessage" aria-live="polite"></p>
+                </form>
+
+                <aside class="content-card booking-card booking-summary" id="bookingSummary">
+                    <h2>Estimate</h2>
+                    <div class="summary-empty">Choose trip details to see price.</div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="currentYear"></span> Ramnagari Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

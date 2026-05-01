@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cab Tariff | Ramnagari Tourism</title>
+    <title>Hotels | Ramnagari Tourism</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -45,63 +45,60 @@
     </header>
 
     <main>
-        <section class="page-banner">
+        <section class="page-banner hotel-banner">
             <div class="container page-banner-content">
-                <span class="section-script">Cab Tariff</span>
-                <h1>Vehicle Options For Local & Outstation Travel</h1>
-                <p>Choose a vehicle category based on group size, comfort, and route preference. Contact us directly for current rates and custom plans.</p>
+                <span class="section-script">Hotel Options</span>
+                <h1>Choose hotel type, price, rooms, and distance from your tour place.</h1>
+                <p>Customers see hotel category and comfort details. Real hotel name and owner details stay private for admin.</p>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container simple-grid three-grid">
+        <section class="section hotel-browser-section">
+            <div class="container">
+                <form class="hotel-filter-bar" id="hotelFilterForm">
+                    <label>
+                        <span>Destination</span>
+                        <select id="hotelDestinationSelect" required>
+                            <option value="">Loading destinations...</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span>Hotel Type</span>
+                        <select id="hotelCategorySelect">
+                            <option value="">All hotel types</option>
+                            <option value="Budget">Budget</option>
+                            <option value="2 Star">2 Star</option>
+                            <option value="3 Star">3 Star</option>
+                            <option value="4 Star">4 Star</option>
+                        </select>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">View Hotels</button>
+                </form>
+
+                <div class="hotel-status" id="hotelStatus">Select a destination to view hotel options.</div>
+                <div class="hotel-options-grid" id="hotelOptionsGrid"></div>
+            </div>
+        </section>
+
+        <section class="section hotel-help-section">
+            <div class="container simple-grid two-grid">
                 <article class="content-card">
-                    <h2>Sedan</h2>
-                    <p>Comfortable option for local sightseeing, station pickup, and short outstation rides.</p>
+                    <h2>What customer can compare</h2>
                     <ul>
-                        <li>Seating: 4 passengers</li>
-                        <li>Best for couples and small families</li>
-                        <li>Rate: Starting from Rs. XX/km</li>
+                        <li>Hotel type: Budget, 2 Star, 3 Star, 4 Star</li>
+                        <li>Selling price per room</li>
+                        <li>Available rooms</li>
+                        <li>Distance from tour destination</li>
+                        <li>Nearby place, amenities, check-in and check-out timing</li>
                     </ul>
                 </article>
                 <article class="content-card">
-                    <h2>SUV</h2>
-                    <p>Suitable for family travel with extra luggage space and a comfortable long-route experience.</p>
-                    <ul>
-                        <li>Seating: 6 passengers</li>
-                        <li>Best for outstation road trips</li>
-                        <li>Rate: Starting from Rs. XX/km</li>
-                    </ul>
-                </article>
-                <article class="content-card">
-                    <h2>Innova</h2>
-                    <p>Popular premium family vehicle for pilgrim routes, hotel travel, and temple circuits.</p>
-                    <ul>
-                        <li>Seating: 7 passengers</li>
-                        <li>Best for family pilgrimage tours</li>
-                        <li>Rate: Starting from Rs. XX/km</li>
-                    </ul>
-                </article>
-                <article class="content-card">
-                    <h2>Tempo Traveller</h2>
-                    <p>Ideal for larger groups attending darshan, family functions, or extended outstation trips.</p>
-                    <ul>
-                        <li>Seating: 12 passengers</li>
-                        <li>Best for groups and yatra teams</li>
-                        <li>Rate: Starting from Rs. XX/km</li>
-                    </ul>
-                </article>
-                <article class="content-card">
-                    <h2>Local Cab Service</h2>
-                    <p>Book city rides for temple visits, sightseeing routes, hotels, and railway station transfers.</p>
+                    <h2>Ready to book?</h2>
+                    <p>After choosing a hotel option, customer can continue to secure booking and advance payment.</p>
                     <div class="page-cta-row">
-                        <a href="../index.html#enquiry" class="btn btn-primary">Book Cab</a>
-                    </div>
-                </article>
-                <article class="content-card">
-                    <h2>Need Exact Fare?</h2>
-                    <p>Call or WhatsApp us with your route, pickup date, and group size for a quick quotation.</p>
-                    <div class="page-cta-row">
+                        <a href="booking.html" class="btn btn-primary">Book & Pay</a>
                         <a href="tel:+917607745628" class="btn btn-secondary">Call Now</a>
                     </div>
                 </article>
@@ -116,5 +113,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/hotels.js"></script>
 </body>
 </html>
