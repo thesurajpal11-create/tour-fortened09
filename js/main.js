@@ -216,6 +216,24 @@ function saveReviews(reviews) {
     localStorage.setItem(reviewsStorageKey, JSON.stringify(reviews));
 }
 
+async function sendFormSubmitEmail(form) {
+    const action = form.getAttribute("action");
+
+    if (!action) {
+        return false;
+    }
+
+    const response = await fetch(action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+            Accept: "application/json",
+        },
+    });
+
+    return response.ok;
+}
+
 function seedDefaultReviews() {
     if (localStorage.getItem(reviewsSeededKey) === "true") {
         return;
@@ -283,12 +301,13 @@ if (reviewForm) {
     seedDefaultReviews();
     renderReviews();
 
-    reviewForm.addEventListener("submit", (event) => {
+    reviewForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const nameInput = reviewForm.querySelector("#reviewName");
         const ratingInput = reviewForm.querySelector("#reviewRating");
         const messageInput = reviewForm.querySelector("#reviewMessage");
+        const submitButton = reviewForm.querySelector("button[type='submit']");
         const fields = [nameInput, ratingInput, messageInput];
         let isValid = true;
 
@@ -318,10 +337,34 @@ if (reviewForm) {
         renderReviews();
 
         if (reviewFeedback) {
-            reviewFeedback.textContent = "Review saved and sending to Ramnagari Tourism...";
+            reviewFeedback.textContent = "Review saved. Sending to Ramnagari Tourism...";
             reviewFeedback.className = "form-feedback success";
         }
 
-        reviewForm.submit();
+        if (submitButton) {
+            submitButton.disabled = true;
+        }
+
+        try {
+            const emailSent = await sendFormSubmitEmail(reviewForm);
+
+            if (reviewFeedback) {
+                reviewFeedback.textContent = emailSent
+                    ? "Review saved and sent to Ramnagari Tourism."
+                    : "Review saved on this device.";
+                reviewFeedback.className = "form-feedback success";
+            }
+        } catch (error) {
+            if (reviewFeedback) {
+                reviewFeedback.textContent = "Review saved on this device. Email sending could not be confirmed.";
+                reviewFeedback.className = "form-feedback success";
+            }
+        } finally {
+            reviewForm.reset();
+
+            if (submitButton) {
+                submitButton.disabled = false;
+            }
+        }
     });
 }
