@@ -14,6 +14,7 @@ const reviewSummary = document.getElementById("reviewSummary");
 const reviewFeedback = document.getElementById("reviewFeedback");
 const reviewsStorageKey = "ramnagariTourismReviews";
 const reviewsSeededKey = "ramnagariTourismReviewsSeeded";
+const minimumReviewRating = 4;
 const defaultReviews = [
     {
         id: 1704101400001,
@@ -206,7 +207,14 @@ enquiryForms.forEach((enquiryForm) => {
 function getSavedReviews() {
     try {
         const savedReviews = JSON.parse(localStorage.getItem(reviewsStorageKey) || "[]");
-        return Array.isArray(savedReviews) ? savedReviews : [];
+        const validReviews = Array.isArray(savedReviews) ? savedReviews : [];
+        const approvedReviews = validReviews.filter((review) => Number(review.rating) >= minimumReviewRating);
+
+        if (approvedReviews.length !== validReviews.length) {
+            localStorage.setItem(reviewsStorageKey, JSON.stringify(approvedReviews));
+        }
+
+        return approvedReviews;
     } catch (error) {
         return [];
     }
@@ -325,11 +333,21 @@ if (reviewForm) {
             return;
         }
 
+        const rating = Number(ratingInput.value);
+
+        if (rating < minimumReviewRating) {
+            if (reviewFeedback) {
+                reviewFeedback.textContent = "Please choose a rating of 4 stars or higher.";
+                reviewFeedback.className = "form-feedback error";
+            }
+            return;
+        }
+
         const reviews = getSavedReviews();
         reviews.unshift({
             id: Date.now(),
             name: nameInput.value.trim(),
-            rating: Number(ratingInput.value),
+            rating,
             message: messageInput.value.trim(),
             createdAt: new Date().toISOString(),
         });
