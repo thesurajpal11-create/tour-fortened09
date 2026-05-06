@@ -180,10 +180,11 @@ function validateField(field) {
 }
 
 enquiryForms.forEach((enquiryForm) => {
-    enquiryForm.addEventListener("submit", (event) => {
+    enquiryForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const fields = enquiryForm.querySelectorAll("input, select, textarea");
+        const submitButton = enquiryForm.querySelector("button[type='submit']");
         let isValid = true;
 
         fields.forEach((field) => {
@@ -198,9 +199,28 @@ enquiryForms.forEach((enquiryForm) => {
             return;
         }
 
-        // Preserve the current validation UX, then allow FormSubmit to send the form.
         setFeedback(enquiryForm, "Submitting your enquiry...", "success");
-        enquiryForm.submit();
+
+        if (submitButton) {
+            submitButton.disabled = true;
+        }
+
+        try {
+            const emailSent = await sendFormSubmitEmail(enquiryForm);
+
+            if (!emailSent) {
+                throw new Error("FormSubmit did not confirm delivery.");
+            }
+
+            enquiryForm.reset();
+            setFeedback(enquiryForm, "Thank you. Your enquiry has been sent successfully.", "success");
+        } catch (error) {
+            setFeedback(enquiryForm, "Sorry, your enquiry could not be sent. Please call or WhatsApp us.", "error");
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+            }
+        }
     });
 });
 
