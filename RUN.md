@@ -112,13 +112,13 @@ Open: **http://localhost:5500**
 2. Create database:
    ```sql
    mysql -u root -p
-   CREATE DATABASE ayodhya_tourism;
+   CREATE DATABASE ramnagari_tourism CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    EXIT;
    ```
 
-3. Update credentials in `backend/database.py`
-   ```python
-   DATABASE_URL = "mysql+mysqlconnector://root:your_password@localhost:3306/ayodhya_tourism"
+3. Update credentials in `backend/.env`
+   ```env
+   DATABASE_URL=mysql+pymysql://tour_user:strong_password@127.0.0.1:3306/ramnagari_tourism
    ```
 
 ### Tables Auto-Created
