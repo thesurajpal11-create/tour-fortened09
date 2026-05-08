@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ramnagritourism.com/sitemap.xml
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+Sitemap: https://www.ramnagritourism.com/sitemap.xml
