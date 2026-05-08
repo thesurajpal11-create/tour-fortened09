@@ -12,6 +12,7 @@ const reviewForm = document.getElementById("reviewForm");
 const reviewList = document.getElementById("reviewList");
 const reviewSummary = document.getElementById("reviewSummary");
 const reviewFeedback = document.getElementById("reviewFeedback");
+const faqItems = document.querySelectorAll(".faq-item");
 const reviewsStorageKey = "ramnagariTourismReviews";
 const reviewsSeededKey = "ramnagariTourismReviewsSeeded";
 const minimumReviewRating = 4;
@@ -406,3 +407,34 @@ if (reviewForm) {
         }
     });
 }
+
+faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    if (!question || !answer) {
+        return;
+    }
+
+    question.addEventListener("click", () => {
+        const isOpen = item.classList.contains("is-open");
+
+        faqItems.forEach((otherItem) => {
+            const otherQuestion = otherItem.querySelector(".faq-question");
+            const otherAnswer = otherItem.querySelector(".faq-answer");
+
+            otherItem.classList.remove("is-open");
+            otherQuestion?.setAttribute("aria-expanded", "false");
+
+            if (otherAnswer) {
+                otherAnswer.style.maxHeight = "0";
+            }
+        });
+
+        if (!isOpen) {
+            item.classList.add("is-open");
+            question.setAttribute("aria-expanded", "true");
+            answer.style.maxHeight = `${answer.scrollHeight}px`;
+        }
+    });
+});
