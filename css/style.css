@@ -270,6 +270,123 @@ button:disabled {
     margin-top: 1.2rem;
 }
 
+.seo-hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #ffffff;
+    background: #102235;
+}
+
+.seo-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seo-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(8, 25, 42, 0.78), rgba(8, 25, 42, 0.38)),
+        linear-gradient(180deg, rgba(8, 25, 42, 0.24), rgba(8, 25, 42, 0.68));
+}
+
+.seo-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    padding: 8rem 0 5rem;
+}
+
+.seo-hero-content .section-script {
+    color: #eef7ff;
+}
+
+.seo-hero h1 {
+    margin: 0.35rem 0 1rem;
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 1.04;
+}
+
+.seo-hero p {
+    max-width: 640px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.seo-content-section {
+    background: #f5f8fb;
+}
+
+.seo-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.seo-main h2,
+.seo-sidebar h2,
+.seo-sidebar h3 {
+    color: var(--primary-dark);
+}
+
+.seo-main h2:first-child,
+.seo-sidebar h2:first-child {
+    margin-top: 0;
+}
+
+.seo-sidebar {
+    position: sticky;
+    top: 104px;
+}
+
+.internal-link-list {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.internal-link-list a {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: var(--primary-dark);
+    font-weight: 800;
+}
+
+.faq-list {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.faq-list details {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.faq-list summary {
+    cursor: pointer;
+    padding: 1rem 1.1rem;
+    color: var(--primary-dark);
+    font-weight: 800;
+}
+
+.faq-list details p {
+    margin: 0;
+    padding: 0 1.1rem 1rem;
+}
+
 .hotel-banner {
     background:
         linear-gradient(135deg, rgba(12, 75, 128, 0.9), rgba(24, 117, 198, 0.82)),
