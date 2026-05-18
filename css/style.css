@@ -957,6 +957,88 @@ button:disabled {
 }
 
 /* =========================
+   Popular Packages
+========================= */
+.popular-packages {
+    background:
+        linear-gradient(180deg, #ffffff 0%, #f5f8fb 100%);
+}
+
+.popular-package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+}
+
+.popular-package-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+    border: 1px solid rgba(15, 90, 157, 0.12);
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.popular-package-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 42px rgba(15, 49, 87, 0.16);
+}
+
+.popular-package-media {
+    height: 220px;
+    background: #dfeaf5;
+}
+
+.popular-package-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popular-package-content {
+    display: grid;
+    align-content: start;
+    gap: 0.75rem;
+    padding: 1.25rem;
+}
+
+.popular-package-label {
+    width: fit-content;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: #fff7df;
+    color: #8b6508;
+    font-weight: 800;
+    font-size: 0.84rem;
+}
+
+.popular-package-content h3 {
+    margin: 0;
+    color: var(--primary-dark);
+    font-size: 1.28rem;
+    line-height: 1.25;
+}
+
+.popular-package-content p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 700;
+}
+
+.popular-package-duration {
+    color: var(--primary) !important;
+}
+
+.popular-package-content .btn {
+    width: 100%;
+    margin-top: 0.6rem;
+    align-self: end;
+}
+
+/* =========================
    Shared
 ========================= */
 .btn {
@@ -1832,6 +1914,10 @@ button:disabled {
     .booking-summary {
         grid-column: 1 / -1;
     }
+
+    .popular-package-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1976,6 +2062,10 @@ button:disabled {
         flex-direction: column;
         align-items: center;
     }
+
+    .popular-package-content .btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 560px) {
@@ -2021,5 +2111,9 @@ button:disabled {
 
     .floating-btn {
         min-width: 96px;
+    }
+
+    .popular-package-grid {
+        grid-template-columns: 1fr;
     }
 }
