@@ -462,55 +462,141 @@
             </div>
         </section>
 
-        <section class="reviews-section section" id="reviews">
+        <section class="reviews-section section" id="reviews" aria-labelledby="google-reviews-heading">
             <div class="container">
                 <div class="section-heading">
-                    <span class="section-script">Guest Reviews</span>
-                    <h2>Share Your Travel Experience</h2>
+                    <span class="section-script">Google Customer Reviews</span>
+                    <h2 id="google-reviews-heading">Trusted by Travelers Across India</h2>
+                    <p>Real reviews from Google customers of Ayodhya Ramnagri Tourism.</p>
                 </div>
 
-                <div class="reviews-layout">
-                    <form
-                        class="review-form"
-                        id="reviewForm"
-                        method="POST"
-                        action="https://formsubmit.co/ayodhyaramnagritourism@gmail.com"
-                        novalidate
-                    >
-                        <h3>Write a Review</h3>
-                        <input type="hidden" name="_subject" value="New Website Review">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://ramnagritourism.com/index.html#reviews">
-                        <input type="hidden" name="_url" value="https://ramnagritourism.com/index.html#reviews">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="reviewName">Name</label>
-                                <input type="text" id="reviewName" name="review_name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="reviewRating">Rating</label>
-                                <select id="reviewRating" name="review_rating" required>
-                                    <option value="">Select rating</option>
-                                    <option value="5">5 Stars</option>
-                                    <option value="4">4 Stars</option>
-                                </select>
-                            </div>
-                            <div class="form-group form-group-full">
-                                <label for="reviewMessage">Review</label>
-                                <textarea id="reviewMessage" name="review_message" rows="4" required></textarea>
-                            </div>
-                            <div class="form-group form-group-full">
-                                <button type="submit" class="btn btn-primary">Save Review</button>
-                                <p class="form-feedback" id="reviewFeedback" aria-live="polite"></p>
-                            </div>
-                        </div>
-                    </form>
-
-                    <div class="review-list-wrap">
-                        <div class="review-summary" id="reviewSummary">No reviews yet.</div>
-                        <div class="review-list" id="reviewList" aria-live="polite"></div>
+                <div class="google-reviews-summary" aria-label="Overall Google rating">
+                    <span class="google-review-icon" aria-label="Google">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                            <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                            <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <div class="google-review-score">4.9 <span class="google-review-stars" aria-label="4.9 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                        <p>Based on 100+ Google reviews</p>
                     </div>
+                </div>
+
+                <div class="google-reviews-track" aria-label="6 featured Google customer reviews">
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Priya Sharma</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Wonderful Ayodhya darshan experience. The cab was clean, the driver was polite, and the team handled our family itinerary with real care.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Rahul Verma</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Booked Ayodhya, Prayagraj and Kashi travel support. Everything was on time, transparent, and comfortable from pickup to drop.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Meenakshi Iyer</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Premium service and kind coordination. Hotel suggestions were practical, and our temple visits felt relaxed instead of rushed.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Arvind Singh</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Reliable cab service for our parents. The driver knew the route well and the booking team stayed available throughout the trip.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Sonal Gupta</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Booked a comfortable family cab for local sightseeing. The response was quick, pricing was clear, and the whole trip felt well managed.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Nitin Agarwal</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Great support for our spiritual tour. The team helped with timing, route planning and hotel coordination without any confusion.</p>
+                    </article>
+                </div>
+
+                <div class="google-reviews-action">
+                    <a href="https://www.google.com/search?q=Ayodhya+Ramnagri+Tourism+Google+reviews" class="btn btn-primary" target="_blank" rel="noopener">View All Reviews on Google</a>
                 </div>
             </div>
         </section>
