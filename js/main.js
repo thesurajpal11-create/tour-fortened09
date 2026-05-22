@@ -17,6 +17,7 @@ const faqItems = document.querySelectorAll(".faq-item");
 const reviewsStorageKey = "ramnagariTourismReviews";
 const reviewsSeededKey = "ramnagariTourismReviewsSeeded";
 const minimumReviewRating = 4;
+const whatsappNumber = "917607745628";
 const defaultReviews = [
     {
         id: 1704101400001,
@@ -188,30 +189,37 @@ function validateField(field) {
     return true;
 }
 
-async function sendFormSubmitEmail(form) {
-    const action = form.getAttribute("action");
+function getFormValue(form, selectors, fallback = "Not provided") {
+    const field = selectors
+        .map((selector) => form.querySelector(selector))
+        .find(Boolean);
+    const value = field?.value?.trim();
 
-    if (!action) {
-        return false;
-    }
+    return value || fallback;
+}
 
-    const response = await fetch(action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: {
-            Accept: "application/json",
-        },
-    });
+function buildWhatsAppEnquiryMessage(form) {
+    const details = [
+        "New Tour Enquiry",
+        "",
+        `Name: ${getFormValue(form, ["#fullName", "[name='full_name']", "[name='name']"])}`,
+        `Mobile: ${getFormValue(form, ["#mobile", "[name='mobile']", "[name='phone']"])}`,
+        `Travel Date: ${getFormValue(form, ["#pickupDate", "[name='pickup_date']", "[name='travel_date']"])}`,
+        `Pickup Place: ${getFormValue(form, ["#pickupPlace", "[name='pickup_place']"])}`,
+        `Destination: ${getFormValue(form, ["#destinationPlace", "[name='destination']"])}`,
+        `Vehicle Type: ${getFormValue(form, ["#vehicleType", "[name='vehicle_type']"])}`,
+        `Hotel Type: ${getFormValue(form, ["#hotelType", "[name='hotel_type']"])}`,
+        `Message: ${getFormValue(form, ["#message", "[name='message']"])}`,
+    ];
 
-    return response.ok;
+    return details.join("\n");
 }
 
 enquiryForms.forEach((enquiryForm) => {
-    enquiryForm.addEventListener("submit", async (event) => {
+    enquiryForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
         const fields = enquiryForm.querySelectorAll("input, select, textarea");
-        const submitButton = enquiryForm.querySelector("button[type='submit']");
         let isValid = true;
 
         fields.forEach((field) => {
@@ -226,28 +234,17 @@ enquiryForms.forEach((enquiryForm) => {
             return;
         }
 
-        setFeedback(enquiryForm, "Submitting your enquiry...", "success");
+        const message = buildWhatsAppEnquiryMessage(enquiryForm);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener");
 
-        if (submitButton) {
-            submitButton.disabled = true;
+        if (!whatsappWindow) {
+            setFeedback(enquiryForm, "Please allow popups or tap WhatsApp to send your enquiry.", "error");
+            return;
         }
 
-        try {
-            const emailSent = await sendFormSubmitEmail(enquiryForm);
-
-            if (!emailSent) {
-                throw new Error("FormSubmit did not confirm delivery.");
-            }
-
-            enquiryForm.reset();
-            setFeedback(enquiryForm, "Thank you. Your enquiry has been sent successfully.", "success");
-        } catch (error) {
-            setFeedback(enquiryForm, "Sorry, your enquiry could not be sent. Please call or WhatsApp us.", "error");
-        } finally {
-            if (submitButton) {
-                submitButton.disabled = false;
-            }
-        }
+        enquiryForm.reset();
+        setFeedback(enquiryForm, "Thank you. WhatsApp is opening with your enquiry details.", "success");
     });
 });
 
