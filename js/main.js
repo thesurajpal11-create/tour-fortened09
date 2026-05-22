@@ -8,6 +8,7 @@ const sliderNext = document.getElementById("sliderNext");
 const enquiryForms = document.querySelectorAll(".enquiry-form");
 const currentYear = document.getElementById("currentYear");
 const pickupDate = document.getElementById("pickupDate");
+const heroTravelDate = document.getElementById("heroTravelDate");
 const reviewForm = document.getElementById("reviewForm");
 const reviewList = document.getElementById("reviewList");
 const reviewSummary = document.getElementById("reviewSummary");
@@ -54,13 +55,20 @@ if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
 }
 
-if (pickupDate) {
+function setMinimumToday(dateField) {
+    if (!dateField) {
+        return;
+    }
+
     const today = new Date();
     const year = today.getFullYear();
     const month = String(today.getMonth() + 1).padStart(2, "0");
     const day = String(today.getDate()).padStart(2, "0");
-    pickupDate.min = `${year}-${month}-${day}`;
+    dateField.min = `${year}-${month}-${day}`;
 }
+
+setMinimumToday(pickupDate);
+setMinimumToday(heroTravelDate);
 
 if (navToggle) {
     navToggle.addEventListener("click", () => {

@@ -97,7 +97,7 @@
     </header>
 
     <main>
-        <section class="top-slider" id="home">
+        <section class="top-slider premium-home-hero" id="home">
             <div class="top-slider-track" id="topSliderTrack">
                 <article class="top-slide is-active">
                     <img src="images/ayodhya.jpg" alt="Ayodhya tourism banner">
@@ -115,6 +115,72 @@
                     <img src="images/mathura.jpg" alt="Mathura tourism banner">
                     <div class="top-slide-overlay"></div>
                 </article>
+            </div>
+
+            <div class="container hero-conversion">
+                <div class="hero-copy">
+                    <span class="hero-kicker">Ayodhya Ramnagri Tourism</span>
+                    <h1>Premium Ayodhya Tour Packages, Cabs and Hotel Support</h1>
+                    <p>Plan your spiritual journey with a trusted local team for Ram Mandir darshan, Kashi, Prayagraj, Chitrakoot, Mathura Vrindavan and custom family tours.</p>
+                    <div class="hero-action-row" aria-label="Quick enquiry options">
+                        <a href="https://wa.me/917607745628" class="hero-contact-btn hero-whatsapp" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+                        <a href="tel:+917607745628" class="hero-contact-btn hero-call">Call Now</a>
+                    </div>
+                </div>
+
+                <form class="hero-search-card" action="pages/tour-packages.html" method="GET" aria-label="Search tour packages">
+                    <div class="hero-search-heading">
+                        <span>Find Your Tour</span>
+                        <strong>Get a fast package quote</strong>
+                    </div>
+                    <div class="hero-search-grid">
+                        <label>
+                            <span>From City</span>
+                            <input type="text" name="from_city" placeholder="Lucknow" autocomplete="address-level2" required>
+                        </label>
+                        <label>
+                            <span>Destination</span>
+                            <select name="destination" required>
+                                <option value="">Select destination</option>
+                                <option value="Ayodhya">Ayodhya</option>
+                                <option value="Ayodhya Kashi Prayagraj">Ayodhya Kashi Prayagraj</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Prayagraj">Prayagraj</option>
+                                <option value="Chitrakoot">Chitrakoot</option>
+                                <option value="Mathura Vrindavan">Mathura Vrindavan</option>
+                                <option value="CharDham">CharDham</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>Travel Date</span>
+                            <input type="date" id="heroTravelDate" name="travel_date" required>
+                        </label>
+                        <label>
+                            <span>Number of Travelers</span>
+                            <input type="number" name="travelers" min="1" max="60" value="2" required>
+                        </label>
+                        <label class="hero-search-full">
+                            <span>Tour Type</span>
+                            <select name="tour_type" required>
+                                <option value="">Select tour type</option>
+                                <option value="Family Tour">Family Tour</option>
+                                <option value="Cab + Hotel Package">Cab + Hotel Package</option>
+                                <option value="Temple Darshan Tour">Temple Darshan Tour</option>
+                                <option value="Group Tour">Group Tour</option>
+                                <option value="Custom Spiritual Tour">Custom Spiritual Tour</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary hero-search-button">Search Packages</button>
+                    <p>Or call <a href="tel:+917607745628">+91 7607745628</a> for instant help.</p>
+                </form>
+
+                <div class="hero-trust-badges" aria-label="Travel trust badges">
+                    <span>Trusted Ayodhya Local Team</span>
+                    <span>Cab + Hotel + Tour Support</span>
+                    <span>24&times;7 Assistance</span>
+                    <span>Family Friendly Tours</span>
+                </div>
             </div>
 
             <button class="slider-arrow slider-arrow-left" id="sliderPrev" type="button" aria-label="Previous slide">
@@ -176,7 +242,7 @@
         <section class="welcome-section">
             <div class="container welcome-content">
                 <span class="script-heading">Planning a Spiritual Journey?</span>
-                <h1>Ayodhya Ramnagri Tourism</h1>
+                <h2>Ayodhya Ramnagri Tourism</h2>
                 <p>
                     Experience premium cab, hotel and tour services across India's most sacred destinations, including Ayodhya, Prayagraj, Kashi, CharDham, Rajasthan, Himachal and more. Travel with trusted drivers, comfortable vehicles, affordable packages and 24×7 support.
                 </p>
@@ -198,61 +264,101 @@
                     <article class="popular-package-card">
                         <div class="popular-package-media">
                             <img src="images/ayodhya.jpg" alt="Ayodhya Spiritual Tour Package">
+                            <span class="popular-package-label">Best Seller</span>
                         </div>
                         <div class="popular-package-content">
-                            <span class="popular-package-label">Featured Package</span>
                             <h3>Ayodhya Spiritual Tour Package</h3>
                             <p class="popular-package-duration">2 Nights / 3 Days</p>
-                            <p>Cab + Hotel + Darshan Support</p>
-                            <a href="packages/ayodhya-package.html" class="btn btn-primary">View Package</a>
+                            <p class="popular-package-copy">Premium Ayodhya tour package for Ram Mandir darshan, local sightseeing, family travel and smooth city transfers.</p>
+                            <div class="popular-package-features" aria-label="Ayodhya package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/ayodhya-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Ayodhya%20Spiritual%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
                         </div>
                     </article>
                     <article class="popular-package-card">
                         <div class="popular-package-media">
                             <img src="images/kashi.jpg" alt="Ayodhya Kashi Prayagraj Tour Package">
+                            <span class="popular-package-label">Spiritual Tour</span>
                         </div>
                         <div class="popular-package-content">
-                            <span class="popular-package-label">Spiritual Circuit</span>
                             <h3>Ayodhya Kashi Prayagraj Tour Package</h3>
-                            <p class="popular-package-duration">Duration placeholder</p>
-                            <p>Cab + Hotel + Darshan Support</p>
-                            <a href="packages/ayodhya-kashi-prayagraj-package.html" class="btn btn-primary">View Package</a>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">A complete spiritual circuit covering Ayodhya, Kashi and Prayagraj with temple visit planning and road travel support.</p>
+                            <div class="popular-package-features" aria-label="Ayodhya Kashi Prayagraj package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/ayodhya-kashi-prayagraj-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Ayodhya%20Kashi%20Prayagraj%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
                         </div>
                     </article>
                     <article class="popular-package-card">
                         <div class="popular-package-media">
                             <img src="images/chitrakoot.jpg" alt="Chitrakoot Tour Package">
+                            <span class="popular-package-label">Family Friendly</span>
                         </div>
                         <div class="popular-package-content">
-                            <span class="popular-package-label">Devotional Trip</span>
                             <h3>Chitrakoot Tour Package</h3>
-                            <p class="popular-package-duration">Duration placeholder</p>
-                            <p>Cab + Hotel + Sightseeing Support</p>
-                            <a href="packages/chitrakoot-package.html" class="btn btn-primary">View Package</a>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">Plan a peaceful Chitrakoot tour with devotional sightseeing, comfortable cab service and family-focused itinerary support.</p>
+                            <div class="popular-package-features" aria-label="Chitrakoot package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/chitrakoot-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Chitrakoot%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
                         </div>
                     </article>
                     <article class="popular-package-card">
                         <div class="popular-package-media">
                             <img src="images/ayodhya.jpg" alt="Naimisharanya Tour Package">
+                            <span class="popular-package-label">Temple Tour</span>
                         </div>
                         <div class="popular-package-content">
-                            <span class="popular-package-label">Temple Tour</span>
                             <h3>Naimisharanya Tour Package</h3>
-                            <p class="popular-package-duration">Duration placeholder</p>
-                            <p>Cab + Hotel + Temple Visit Support</p>
-                            <a href="packages/naimisharanya-package.html" class="btn btn-primary">View Package</a>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">Book a Naimisharanya temple tour with trusted local coordination, clean cab service and hotel guidance for pilgrims.</p>
+                            <div class="popular-package-features" aria-label="Naimisharanya package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/naimisharanya-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Naimisharanya%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
                         </div>
                     </article>
                     <article class="popular-package-card">
                         <div class="popular-package-media">
                             <img src="images/varanasi.jpg" alt="Char Dham Tour Package">
+                            <span class="popular-package-label">Premium Yatra</span>
                         </div>
                         <div class="popular-package-content">
-                            <span class="popular-package-label">Premium Yatra</span>
                             <h3>Char Dham Tour Package</h3>
-                            <p class="popular-package-duration">Duration placeholder</p>
-                            <p>Cab + Hotel + Route Planning Support</p>
-                            <a href="packages/chardham-package.html" class="btn btn-primary">View Package</a>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">Premium Char Dham yatra planning with route guidance, cab coordination, hotel assistance and 24x7 travel support.</p>
+                            <div class="popular-package-features" aria-label="Char Dham package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/chardham-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Char%20Dham%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -763,7 +869,54 @@
         }
     </script>
 
-    <footer class="site-footer">
+    <footer class="site-footer premium-footer">
+        <div class="container footer-seo-grid">
+            <div class="footer-brand-panel">
+                <strong>Ayodhya Ramnagri Tourism</strong>
+                <p>Premium spiritual tour packages, cab service and hotel assistance from a trusted Ayodhya local team.</p>
+                <div class="footer-contact-actions">
+                    <a href="tel:+917607745628">Call Now</a>
+                    <a href="https://wa.me/917607745628" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+            <nav class="footer-link-group" aria-label="Popular tour packages">
+                <h2>Popular Tour Packages</h2>
+                <a href="ayodhya-tour-package.html">Ayodhya Tour Package</a>
+                <a href="kashi-tour-package.html">Kashi Tour Package</a>
+                <a href="prayagraj-tour-package.html">Prayagraj Tour Package</a>
+                <a href="chitrakoot-tour-package.html">Chitrakoot Tour</a>
+                <a href="naimisharanya-tour-package.html">Naimisharanya Tour</a>
+            </nav>
+            <nav class="footer-link-group" aria-label="Cab services">
+                <h2>Cab Services</h2>
+                <a href="ayodhya-cab-service.html">Ayodhya Cab Service</a>
+                <a href="pages/cab.html">Cab Tariff</a>
+                <a href="pages/booking.html">Book Tour</a>
+                <a href="pages/contact.html">Airport Pickup Enquiry</a>
+            </nav>
+            <nav class="footer-link-group" aria-label="Spiritual destinations">
+                <h2>Spiritual Destinations</h2>
+                <a href="destinations/ayodhya/">Ayodhya</a>
+                <a href="destinations/varanasi/">Kashi / Varanasi</a>
+                <a href="destinations/prayagraj/">Prayagraj</a>
+                <a href="destinations/chitrakoot/">Chitrakoot</a>
+                <a href="pages/destinations.html">All Destinations</a>
+            </nav>
+            <nav class="footer-link-group" aria-label="Quick links">
+                <h2>Quick Links</h2>
+                <a href="index.html">Home</a>
+                <a href="pages/tour-packages.html">Tour Packages</a>
+                <a href="pages/hotels.html">Hotels</a>
+                <a href="pages/contact.html">Contact & WhatsApp</a>
+                <a href="sitemap.xml">Sitemap</a>
+            </nav>
+            <div class="footer-link-group footer-contact-box">
+                <h2>Contact & WhatsApp</h2>
+                <a href="tel:+917607745628">+91 7607745628</a>
+                <a href="https://wa.me/917607745628" target="_blank" rel="noopener">Chat on WhatsApp</a>
+                <p>Share your date, pickup city, destination and number of travelers for a quick package suggestion.</p>
+            </div>
+        </div>
         <div class="container footer-inner">
             <p>&copy; <span id="currentYear"></span> Ramnagari Tourism. All rights reserved.</p>
         </div>
@@ -773,6 +926,12 @@
         <a href="tel:+917607745628" class="floating-btn call-float" aria-label="Call Ramnagari Tourism">Call</a>
         <a href="https://wa.me/917607745628" class="floating-btn whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Ramnagari Tourism">WhatsApp</a>
     </div>
+
+    <nav class="mobile-sticky-cta" aria-label="Mobile quick booking actions">
+        <a href="tel:+917607745628" class="mobile-cta-btn mobile-cta-call">Call Now</a>
+        <a href="https://wa.me/917607745628" class="mobile-cta-btn mobile-cta-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="pages/booking.html" class="mobile-cta-btn mobile-cta-book">Book Tour</a>
+    </nav>
 
     <script src="js/main.js"></script>
 </body>
