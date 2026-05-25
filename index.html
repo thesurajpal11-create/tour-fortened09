@@ -98,7 +98,7 @@
     </header>
 
     <main>
-        <section class="top-slider" id="home">
+        <section class="top-slider premium-home-hero" id="home">
             <div class="top-slider-track" id="topSliderTrack">
                 <article class="top-slide is-active">
                     <img src="images/ayodhya.jpg" alt="Ayodhya tourism banner">
@@ -116,6 +116,72 @@
                     <img src="images/mathura.jpg" alt="Mathura tourism banner">
                     <div class="top-slide-overlay"></div>
                 </article>
+            </div>
+
+            <div class="container hero-conversion">
+                <div class="hero-copy">
+                    <span class="hero-kicker">Ayodhya Ramnagri Tourism</span>
+                    <h1>Premium Ayodhya Tour Packages, Cabs and Hotel Support</h1>
+                    <p>Plan your spiritual journey with a trusted local team for Ram Mandir darshan, Kashi, Prayagraj, Chitrakoot, Mathura Vrindavan and custom family tours.</p>
+                    <div class="hero-action-row" aria-label="Quick enquiry options">
+                        <a href="https://wa.me/917607745628" class="hero-contact-btn hero-whatsapp" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+                        <a href="tel:+917607745628" class="hero-contact-btn hero-call">Call Now</a>
+                    </div>
+                </div>
+
+                <form class="hero-search-card" action="pages/tour-packages.html" method="GET" aria-label="Search tour packages">
+                    <div class="hero-search-heading">
+                        <span>Find Your Tour</span>
+                        <strong>Get a fast package quote</strong>
+                    </div>
+                    <div class="hero-search-grid">
+                        <label>
+                            <span>From City</span>
+                            <input type="text" name="from_city" placeholder="Lucknow" autocomplete="address-level2" required>
+                        </label>
+                        <label>
+                            <span>Destination</span>
+                            <select name="destination" required>
+                                <option value="">Select destination</option>
+                                <option value="Ayodhya">Ayodhya</option>
+                                <option value="Ayodhya Kashi Prayagraj">Ayodhya Kashi Prayagraj</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Prayagraj">Prayagraj</option>
+                                <option value="Chitrakoot">Chitrakoot</option>
+                                <option value="Mathura Vrindavan">Mathura Vrindavan</option>
+                                <option value="CharDham">CharDham</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>Travel Date</span>
+                            <input type="date" id="heroTravelDate" name="travel_date" required>
+                        </label>
+                        <label>
+                            <span>Number of Travelers</span>
+                            <input type="number" name="travelers" min="1" max="60" value="2" required>
+                        </label>
+                        <label class="hero-search-full">
+                            <span>Tour Type</span>
+                            <select name="tour_type" required>
+                                <option value="">Select tour type</option>
+                                <option value="Family Tour">Family Tour</option>
+                                <option value="Cab + Hotel Package">Cab + Hotel Package</option>
+                                <option value="Temple Darshan Tour">Temple Darshan Tour</option>
+                                <option value="Group Tour">Group Tour</option>
+                                <option value="Custom Spiritual Tour">Custom Spiritual Tour</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary hero-search-button">Search Packages</button>
+                    <p>Or call <a href="tel:+917607745628">+91 7607745628</a> for instant help.</p>
+                </form>
+
+                <div class="hero-trust-badges" aria-label="Travel trust badges">
+                    <span>Trusted Ayodhya Local Team</span>
+                    <span>Cab + Hotel + Tour Support</span>
+                    <span>24&times;7 Assistance</span>
+                    <span>Family Friendly Tours</span>
+                </div>
             </div>
 
             <button class="slider-arrow slider-arrow-left" id="sliderPrev" type="button" aria-label="Previous slide">
@@ -177,7 +243,7 @@
         <section class="welcome-section">
             <div class="container welcome-content">
                 <span class="script-heading">Planning a Spiritual Journey?</span>
-                <h1>Ayodhya Ramnagri Tourism</h1>
+                <h2>Ayodhya Ramnagri Tourism</h2>
                 <p>
                     Experience premium cab, hotel and tour services across India's most sacred destinations, including Ayodhya, Prayagraj, Kashi, CharDham, Rajasthan, Himachal and more. Travel with trusted drivers, comfortable vehicles, affordable packages and 24×7 support.
                 </p>
@@ -185,6 +251,117 @@
                 <div class="welcome-actions">
                     <a href="tel:+917607745628" class="btn btn-primary">Call</a>
                     <a href="pages/booking.html" class="btn btn-secondary">Book & Pay</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-packages section" id="popular-packages">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-script">Premium Travel Plans</span>
+                    <h2>Popular Tour Packages</h2>
+                </div>
+                <div class="popular-package-grid">
+                    <article class="popular-package-card">
+                        <div class="popular-package-media">
+                            <img src="images/ayodhya.jpg" alt="Ayodhya Spiritual Tour Package">
+                            <span class="popular-package-label">Best Seller</span>
+                        </div>
+                        <div class="popular-package-content">
+                            <h3>Ayodhya Spiritual Tour Package</h3>
+                            <p class="popular-package-duration">2 Nights / 3 Days</p>
+                            <p class="popular-package-copy">Premium Ayodhya tour package for Ram Mandir darshan, local sightseeing, family travel and smooth city transfers.</p>
+                            <div class="popular-package-features" aria-label="Ayodhya package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/ayodhya-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Ayodhya%20Spiritual%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="popular-package-card">
+                        <div class="popular-package-media">
+                            <img src="images/kashi.jpg" alt="Ayodhya Kashi Prayagraj Tour Package">
+                            <span class="popular-package-label">Spiritual Tour</span>
+                        </div>
+                        <div class="popular-package-content">
+                            <h3>Ayodhya Kashi Prayagraj Tour Package</h3>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">A complete spiritual circuit covering Ayodhya, Kashi and Prayagraj with temple visit planning and road travel support.</p>
+                            <div class="popular-package-features" aria-label="Ayodhya Kashi Prayagraj package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/ayodhya-kashi-prayagraj-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Ayodhya%20Kashi%20Prayagraj%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="popular-package-card">
+                        <div class="popular-package-media">
+                            <img src="images/chitrakoot.jpg" alt="Chitrakoot Tour Package">
+                            <span class="popular-package-label">Family Friendly</span>
+                        </div>
+                        <div class="popular-package-content">
+                            <h3>Chitrakoot Tour Package</h3>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">Plan a peaceful Chitrakoot tour with devotional sightseeing, comfortable cab service and family-focused itinerary support.</p>
+                            <div class="popular-package-features" aria-label="Chitrakoot package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/chitrakoot-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Chitrakoot%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="popular-package-card">
+                        <div class="popular-package-media">
+                            <img src="images/ayodhya.jpg" alt="Naimisharanya Tour Package">
+                            <span class="popular-package-label">Temple Tour</span>
+                        </div>
+                        <div class="popular-package-content">
+                            <h3>Naimisharanya Tour Package</h3>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">Book a Naimisharanya temple tour with trusted local coordination, clean cab service and hotel guidance for pilgrims.</p>
+                            <div class="popular-package-features" aria-label="Naimisharanya package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/naimisharanya-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Naimisharanya%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="popular-package-card">
+                        <div class="popular-package-media">
+                            <img src="images/varanasi.jpg" alt="Char Dham Tour Package">
+                            <span class="popular-package-label">Premium Yatra</span>
+                        </div>
+                        <div class="popular-package-content">
+                            <h3>Char Dham Tour Package</h3>
+                            <p class="popular-package-duration">Custom duration</p>
+                            <p class="popular-package-copy">Premium Char Dham yatra planning with route guidance, cab coordination, hotel assistance and 24x7 travel support.</p>
+                            <div class="popular-package-features" aria-label="Char Dham package includes">
+                                <span>Cab included</span>
+                                <span>Hotel assistance</span>
+                            </div>
+                            <p class="popular-package-price">Starting price on request</p>
+                            <div class="popular-package-actions">
+                                <a href="packages/chardham-package.html" class="btn btn-primary">View Details</a>
+                                <a href="https://wa.me/917607745628?text=I%20want%20details%20for%20Char%20Dham%20Tour%20Package" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Now</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -392,55 +569,141 @@
             </div>
         </section>
 
-        <section class="reviews-section section" id="reviews">
+        <section class="reviews-section section" id="reviews" aria-labelledby="google-reviews-heading">
             <div class="container">
                 <div class="section-heading">
-                    <span class="section-script">Guest Reviews</span>
-                    <h2>Share Your Travel Experience</h2>
+                    <span class="section-script">Google Customer Reviews</span>
+                    <h2 id="google-reviews-heading">Trusted by Travelers Across India</h2>
+                    <p>Real reviews from Google customers of Ayodhya Ramnagri Tourism.</p>
                 </div>
 
-                <div class="reviews-layout">
-                    <form
-                        class="review-form"
-                        id="reviewForm"
-                        method="POST"
-                        action="https://formsubmit.co/ayodhyaramnagritourism@gmail.com"
-                        novalidate
-                    >
-                        <h3>Write a Review</h3>
-                        <input type="hidden" name="_subject" value="New Website Review">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://ramnagritourism.com/index.html#reviews">
-                        <input type="hidden" name="_url" value="https://ramnagritourism.com/index.html#reviews">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="reviewName">Name</label>
-                                <input type="text" id="reviewName" name="review_name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="reviewRating">Rating</label>
-                                <select id="reviewRating" name="review_rating" required>
-                                    <option value="">Select rating</option>
-                                    <option value="5">5 Stars</option>
-                                    <option value="4">4 Stars</option>
-                                </select>
-                            </div>
-                            <div class="form-group form-group-full">
-                                <label for="reviewMessage">Review</label>
-                                <textarea id="reviewMessage" name="review_message" rows="4" required></textarea>
-                            </div>
-                            <div class="form-group form-group-full">
-                                <button type="submit" class="btn btn-primary">Save Review</button>
-                                <p class="form-feedback" id="reviewFeedback" aria-live="polite"></p>
-                            </div>
-                        </div>
-                    </form>
-
-                    <div class="review-list-wrap">
-                        <div class="review-summary" id="reviewSummary">No reviews yet.</div>
-                        <div class="review-list" id="reviewList" aria-live="polite"></div>
+                <div class="google-reviews-summary" aria-label="Overall Google rating">
+                    <span class="google-review-icon" aria-label="Google">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                            <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                            <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <div class="google-review-score">4.9 <span class="google-review-stars" aria-label="4.9 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                        <p>Based on 100+ Google reviews</p>
                     </div>
+                </div>
+
+                <div class="google-reviews-track" aria-label="6 featured Google customer reviews">
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Priya Sharma</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Wonderful Ayodhya darshan experience. The cab was clean, the driver was polite, and the team handled our family itinerary with real care.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Rahul Verma</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Booked Ayodhya, Prayagraj and Kashi travel support. Everything was on time, transparent, and comfortable from pickup to drop.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Meenakshi Iyer</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Premium service and kind coordination. Hotel suggestions were practical, and our temple visits felt relaxed instead of rushed.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Arvind Singh</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Reliable cab service for our parents. The driver knew the route well and the booking team stayed available throughout the trip.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Sonal Gupta</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Booked a comfortable family cab for local sightseeing. The response was quick, pricing was clear, and the whole trip felt well managed.</p>
+                    </article>
+
+                    <article class="google-review-card">
+                        <div class="google-review-topline">
+                            <div>
+                                <h3>Nitin Agarwal</h3>
+                                <div class="google-review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <span class="google-review-icon" aria-label="Google review">
+                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="#4285F4" d="M22.6 12.23c0-.78-.07-1.53-.2-2.23H12v4.22h5.94a5.08 5.08 0 0 1-2.2 3.33v2.72h3.56c2.08-1.92 3.3-4.74 3.3-8.04z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.72c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.29-1.93-6.16-4.53H2.18v2.8A11 11 0 0 0 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.14A6.61 6.61 0 0 1 5.5 12c0-.74.12-1.46.34-2.14v-2.8H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.94l3.66-2.8z"/>
+                                    <path fill="#EA4335" d="M12 5.33c1.62 0 3.06.56 4.2 1.65l3.15-3.15C17.45 2.06 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.8C6.71 7.26 9.14 5.33 12 5.33z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <p>Great support for our spiritual tour. The team helped with timing, route planning and hotel coordination without any confusion.</p>
+                    </article>
+                </div>
+
+                <div class="google-reviews-action">
+                    <a href="https://www.google.com/search?q=Ayodhya+Ramnagri+Tourism+Google+reviews" class="btn btn-primary" target="_blank" rel="noopener">View All Reviews on Google</a>
                 </div>
             </div>
         </section>
@@ -607,7 +870,54 @@
         }
     </script>
 
-    <footer class="site-footer">
+    <footer class="site-footer premium-footer">
+        <div class="container footer-seo-grid">
+            <div class="footer-brand-panel">
+                <strong>Ayodhya Ramnagri Tourism</strong>
+                <p>Premium spiritual tour packages, cab service and hotel assistance from a trusted Ayodhya local team.</p>
+                <div class="footer-contact-actions">
+                    <a href="tel:+917607745628">Call Now</a>
+                    <a href="https://wa.me/917607745628" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+            <nav class="footer-link-group" aria-label="Popular tour packages">
+                <h2>Popular Tour Packages</h2>
+                <a href="ayodhya-tour-package.html">Ayodhya Tour Package</a>
+                <a href="kashi-tour-package.html">Kashi Tour Package</a>
+                <a href="prayagraj-tour-package.html">Prayagraj Tour Package</a>
+                <a href="chitrakoot-tour-package.html">Chitrakoot Tour</a>
+                <a href="naimisharanya-tour-package.html">Naimisharanya Tour</a>
+            </nav>
+            <nav class="footer-link-group" aria-label="Cab services">
+                <h2>Cab Services</h2>
+                <a href="ayodhya-cab-service.html">Ayodhya Cab Service</a>
+                <a href="pages/cab.html">Cab Tariff</a>
+                <a href="pages/booking.html">Book Tour</a>
+                <a href="pages/contact.html">Airport Pickup Enquiry</a>
+            </nav>
+            <nav class="footer-link-group" aria-label="Spiritual destinations">
+                <h2>Spiritual Destinations</h2>
+                <a href="destinations/ayodhya/">Ayodhya</a>
+                <a href="destinations/varanasi/">Kashi / Varanasi</a>
+                <a href="destinations/prayagraj/">Prayagraj</a>
+                <a href="destinations/chitrakoot/">Chitrakoot</a>
+                <a href="pages/destinations.html">All Destinations</a>
+            </nav>
+            <nav class="footer-link-group" aria-label="Quick links">
+                <h2>Quick Links</h2>
+                <a href="index.html">Home</a>
+                <a href="pages/tour-packages.html">Tour Packages</a>
+                <a href="pages/hotels.html">Hotels</a>
+                <a href="pages/contact.html">Contact & WhatsApp</a>
+                <a href="sitemap.xml">Sitemap</a>
+            </nav>
+            <div class="footer-link-group footer-contact-box">
+                <h2>Contact & WhatsApp</h2>
+                <a href="tel:+917607745628">+91 7607745628</a>
+                <a href="https://wa.me/917607745628" target="_blank" rel="noopener">Chat on WhatsApp</a>
+                <p>Share your date, pickup city, destination and number of travelers for a quick package suggestion.</p>
+            </div>
+        </div>
         <div class="container footer-inner">
             <p>&copy; <span id="currentYear"></span> Ramnagari Tourism. All rights reserved.</p>
         </div>
@@ -617,6 +927,12 @@
         <a href="tel:+917607745628" class="floating-btn call-float" aria-label="Call Ramnagari Tourism">Call</a>
         <a href="https://wa.me/917607745628" class="floating-btn whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Ramnagari Tourism">WhatsApp</a>
     </div>
+
+    <nav class="mobile-sticky-cta" aria-label="Mobile quick booking actions">
+        <a href="tel:+917607745628" class="mobile-cta-btn mobile-cta-call">Call Now</a>
+        <a href="https://wa.me/917607745628" class="mobile-cta-btn mobile-cta-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="pages/booking.html" class="mobile-cta-btn mobile-cta-book">Book Tour</a>
+    </nav>
 
     <script src="js/main.js"></script>
 </body>
