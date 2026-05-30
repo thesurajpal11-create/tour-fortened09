@@ -1,0 +1,11 @@
+{
+  "prompt": "Painterly heritage artwork of Ayodhya's skyline at dawn with temple spires, gentle mist over the Saryu river, warm saffron light, painterly brushstrokes, documentary editorial quality — no modern skyline, historically inspired.",
+  "negative_prompt_note": "Avoid modern buildings, text overlays, watermarks or identifiable faces; keep scene atmospheric and non-photorealistic if possible.",
+  "size": "1792x1024",
+  "output_filename": "public/images/blog/ayodhya/ramayana-ayodhya-heritage.webp",
+  "alt_text": "Dawn view of Ayodhya skyline with temple spires and the Saryu river, heritage mood",
+  "seo_caption": "Heritage artwork of Ayodhya at dawn with temple spires and the Saryu river, suitable for hero banners and editorial use.",
+  "placement_section": "Hero banner / OG image",
+  "license_provenance_note": "Keep full provenance: exact prompt, model and version, seed/variation id; verify provider license for commercial/editorial use and keep a copy in blog-assets.",
+  "manifest_status": "pending-generation"
+}

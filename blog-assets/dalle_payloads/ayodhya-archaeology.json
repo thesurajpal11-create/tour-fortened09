@@ -1,0 +1,11 @@
+{
+  "prompt": "Cross-section archaeological illustration of Ayodhya showing stratified layers: ancient habitation, medieval rebuilds, recent temple foundations; labeled strata, archaeological tools, and insets of pottery sherds — clear educational diagram, museum-quality, neutral color palette.",
+  "negative_prompt_note": "No AI watermarks, no extra limbs or people as main subjects, avoid photographic artifacts; keep labels as simple text placeholders not rendered into the image.",
+  "size": "1792x1024",
+  "output_filename": "public/images/blog/ayodhya/ayodhya-archaeology.webp",
+  "alt_text": "Archaeological cross-section illustration showing stratified layers at Ayodhya",
+  "seo_caption": "Educational archaeological illustration of Ayodhya showing stratified deposits, trenches and highlighted finds for explanatory use.",
+  "placement_section": "Archaeology (illustration/infographic)",
+  "license_provenance_note": "Record prompt, model, version and any seed; verify that the provider's terms permit editorial/commercial reuse. Store provenance JSON alongside the image in blog-assets.",
+  "manifest_status": "pending-generation"
+}

@@ -1,0 +1,15 @@
+{
+  "filename": "public/images/blog/ayodhya/ancient-saket-map.webp",
+  "status": "pending-generation",
+  "model": "",
+  "model_version": "",
+  "seed": "",
+  "generation_date": "",
+  "prompt": "Antique-style cartographic map of Ancient Saket (Ayodhya) on aged parchment, showing the Saryu river, clusters of temple icons, labelled key sites (Ram Mandir, Kanak Bhawan, Hanuman Garhi) — hand-drawn engraving look, subtle color washes, compass rose, scale bar, high detail, documentary historical style.",
+  "negative_prompt": "text, watermark, logo, signature, lowres, blurry, extra limbs, mutated, deformed, jpeg artifacts, AI generated watermark",
+  "resolution": "1792x1024",
+  "format": "webp",
+  "license": "Website use only",
+  "created_for": "Ayodhya Ramnagri Tourism",
+  "page": "/ancient-ayodhya-history-archaeology.html"
+}

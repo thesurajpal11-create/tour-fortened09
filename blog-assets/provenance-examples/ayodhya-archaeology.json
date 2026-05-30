@@ -1,0 +1,13 @@
+{
+  "filename": "public/images/blog/ayodhya/ayodhya-archaeology.webp",
+  "model": "",
+  "model_version": "",
+  "generation_date": "",
+  "prompt": "Cross-section archaeological illustration of Ayodhya showing stratified layers: ancient habitation, medieval rebuilds, recent temple foundations; labeled strata, archaeological tools, and insets of pottery sherds — clear educational diagram, museum-quality.",
+  "negative_prompt": "text, watermark, logo, signature, lowres, blurry, extra limbs, mutated, deformed, jpeg artifacts, AI generated watermark",
+  "seed": "",
+  "resolution": "1792x1024",
+  "author": "Ayodhya Ramnagri Tourism",
+  "license": "Website Use",
+  "status": "pending-generation"
+}

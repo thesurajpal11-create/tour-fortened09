@@ -1,0 +1,13 @@
+{
+  "filename": "public/images/blog/ayodhya/ramayana-ayodhya-heritage.webp",
+  "model": "",
+  "model_version": "",
+  "generation_date": "",
+  "prompt": "Painterly heritage artwork of Ayodhya's skyline at dawn with temple spires, gentle mist over the Saryu river, warm saffron light, painterly brushstrokes, documentary editorial quality — no modern skyline, historically inspired.",
+  "negative_prompt": "text, watermark, logo, signature, lowres, blurry, extra limbs, mutated, deformed, jpeg artifacts, AI generated watermark",
+  "seed": "",
+  "resolution": "1792x1024",
+  "author": "Ayodhya Ramnagri Tourism",
+  "license": "Website Use",
+  "status": "pending-generation"
+}
