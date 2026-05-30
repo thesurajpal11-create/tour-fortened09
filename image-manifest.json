@@ -1,0 +1,51 @@
+[
+  {
+    "filename": "images/ayodhya-heritage.webp",
+    "alt_text": "Shri Ram Mandir in Ayodhya with temple architecture and pilgrims",
+    "section_name": "Hero banner and social preview",
+    "caption": "Shri Ram Mandir and the living heritage landscape of Ayodhya.",
+    "format": "webp",
+    "status": "exists_reused"
+  },
+  {
+    "filename": "images/ram-mandir-ayodhya.webp",
+    "alt_text": "Shri Ram Mandir Ayodhya temple facade with carved stone details",
+    "section_name": "Introduction",
+    "caption": "Shri Ram Mandir has made Ayodhya a major national pilgrimage destination.",
+    "format": "webp",
+    "status": "exists_reused"
+  },
+  {
+    "filename": "images/hanuman-garhi-ayodhya.webp",
+    "alt_text": "Hanuman Garhi temple in Ayodhya with pilgrims and temple entrance",
+    "section_name": "Temple Architecture",
+    "caption": "Hanuman Garhi is central to Ayodhya's guardian tradition.",
+    "format": "webp",
+    "status": "exists_reused"
+  },
+  {
+    "filename": "images/kanak-bhawan-ayodhya.webp",
+    "alt_text": "Kanak Bhawan temple courtyard in Ayodhya",
+    "section_name": "Temple Architecture",
+    "caption": "Kanak Bhawan shows Ayodhya's palace-like devotional mood.",
+    "format": "webp",
+    "status": "exists_reused"
+  },
+  {
+    "filename": "images/ayodhya-market.webp",
+    "alt_text": "Ayodhya local market lanes near pilgrimage routes",
+    "section_name": "Did You Know Facts",
+    "caption": "Ayodhya's markets are part of the living pilgrimage experience.",
+    "format": "webp",
+    "status": "exists_reused"
+  },
+  {
+    "filename": "images/ayodhya-archaeology-layers.webp",
+    "alt_text": "Educational illustration of Ayodhya archaeology with layered soil, pottery and old brickwork",
+    "section_name": "Archaeological Perspective",
+    "caption": "Custom archaeology image required before replacing the prompt card.",
+    "prompt": "Documentary-style educational illustration of Ayodhya archaeology, showing a clean excavation trench, layered soil section, pottery sherds, old brickwork, measured grid strings, and a subtle Saryu river reference in the background. Use warm natural light, no people in focus, no text, no watermark, no modern fantasy elements.",
+    "format": "webp",
+    "status": "prompt_ready"
+  }
+]

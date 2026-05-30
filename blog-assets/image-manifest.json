@@ -1,0 +1,51 @@
+[
+  {
+    "filename": "images/ayodhya-heritage.webp",
+    "alt_text": "Shri Ram Mandir in Ayodhya with temple architecture and pilgrims",
+    "section": "Hero banner and social preview",
+    "caption": "Shri Ram Mandir and the living heritage landscape of Ayodhya.",
+    "status": "exists_reused",
+    "metadata_file": "blog-assets/metadata/ayodhya-heritage.metadata.json"
+  },
+  {
+    "filename": "images/ram-mandir-ayodhya.webp",
+    "alt_text": "Shri Ram Mandir Ayodhya temple facade with carved stone details",
+    "section": "Introduction",
+    "caption": "Shri Ram Mandir has made Ayodhya a major national pilgrimage destination.",
+    "status": "exists_reused",
+    "metadata_file": "blog-assets/metadata/ram-mandir-ayodhya.metadata.json"
+  },
+  {
+    "filename": "images/hanuman-garhi-ayodhya.webp",
+    "alt_text": "Hanuman Garhi temple in Ayodhya with pilgrims and temple entrance",
+    "section": "Temple Architecture",
+    "caption": "Hanuman Garhi is central to Ayodhya's guardian tradition.",
+    "status": "exists_reused",
+    "metadata_file": "blog-assets/metadata/hanuman-garhi-ayodhya.metadata.json"
+  },
+  {
+    "filename": "images/kanak-bhawan-ayodhya.webp",
+    "alt_text": "Kanak Bhawan temple courtyard in Ayodhya",
+    "section": "Temple Architecture",
+    "caption": "Kanak Bhawan shows Ayodhya's palace-like devotional mood.",
+    "status": "exists_reused",
+    "metadata_file": "blog-assets/metadata/kanak-bhawan-ayodhya.metadata.json"
+  },
+  {
+    "filename": "images/ayodhya-market.webp",
+    "alt_text": "Ayodhya local market lanes near pilgrimage routes",
+    "section": "Did You Know Facts",
+    "caption": "Ayodhya's markets are part of the living pilgrimage experience.",
+    "status": "exists_reused",
+    "metadata_file": "blog-assets/metadata/ayodhya-market.metadata.json"
+  },
+  {
+    "filename": "images/ayodhya-archaeology-layers.webp",
+    "alt_text": "Educational illustration of Ayodhya archaeology with layered soil, pottery and old brickwork",
+    "section": "Archaeological Perspective",
+    "caption": "Custom archaeology image required before replacing the prompt card.",
+    "prompt": "Documentary-style educational illustration of Ayodhya archaeology, showing a clean excavation trench, layered soil section, pottery sherds, old brickwork, measured grid strings, and a subtle Saryu river reference in the background. Use warm natural light, no people in focus, no text, no watermark, no modern fantasy elements.",
+    "status": "prompt_ready",
+    "metadata_file": "blog-assets/metadata/ayodhya-archaeology-layers.metadata.json"
+  }
+]

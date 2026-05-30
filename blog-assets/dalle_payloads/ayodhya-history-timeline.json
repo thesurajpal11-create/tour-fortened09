@@ -1,0 +1,11 @@
+{
+  "prompt": "Horizontal timeline banner illustrating Ayodhya's major periods: Vedic/early, classical Saket, medieval, and modern reconstruction — include dated markers and small illustrative icons (temple, river, pottery), elegant museum-style serif labels, warm parchment background.",
+  "negative_prompt_note": "Avoid small illegible text, watermarks, logos or modern cityscapes; ensure icons are clear and not photorealistic people.",
+  "size": "1792x1024",
+  "output_filename": "public/images/blog/ayodhya/ayodhya-history-timeline.webp",
+  "alt_text": "Historical timeline of Ayodhya showing major periods from ancient Saket to modern heritage",
+  "seo_caption": "Timeline banner illustrating Ayodhya's historical phases with dated markers and iconography for editorial use.",
+  "placement_section": "Did You Know / Timeline inset",
+  "license_provenance_note": "Store prompt, model and seed metadata with the image; ensure license allows editorial use and derivative web publication.",
+  "manifest_status": "pending-generation"
+}

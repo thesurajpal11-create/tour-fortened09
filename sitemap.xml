@@ -43,6 +43,12 @@
         <priority>0.84</priority>
     </url>
     <url>
+        <loc>https://www.ramnagritourism.com/ayodhya-itinerary-for-2-days.html</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.89</priority>
+    </url>
+    <url>
         <loc>https://www.ramnagritourism.com/ayodhya-tour-package.html</loc>
         <lastmod>2026-05-25</lastmod>
         <changefreq>weekly</changefreq>
@@ -191,5 +197,17 @@
         <lastmod>2026-05-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.72</priority>
+    </url>
+    <url>
+        <loc>https://www.ramnagritourism.com/ancient-ayodhya-history-archaeology.html</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.88</priority>
+    </url>
+    <url>
+        <loc>https://www.ramnagritourism.com/ancient-ayodhya-history-archaeology.en.html</loc>
+        <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
     </url>
 </urlset>
