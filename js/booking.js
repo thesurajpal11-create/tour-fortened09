@@ -51,6 +51,10 @@ function authHeaders() {
 }
 
 async function api(path, options = {}) {
+    if (!BOOKING_API_BASE_URL) {
+        throw new Error("Online booking is unavailable because the backend is not deployed.");
+    }
+
     const response = await fetch(`${BOOKING_API_BASE_URL}${path}`, {
         ...options,
         headers: {

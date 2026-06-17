@@ -54,6 +54,10 @@ function createButton(text, className = "btn btn-secondary") {
 }
 
 async function mediaRequest(path, options = {}) {
+    if (!MEDIA_API_BASE_URL) {
+        throw new Error("Destination media saving is unavailable because the backend is not deployed.");
+    }
+
     const response = await fetch(`${MEDIA_API_BASE_URL}${path}`, options);
     const data = await response.json().catch(() => ({}));
     if (!response.ok) {
@@ -366,7 +370,7 @@ loadSavedMedia().catch(() => {
     document.querySelectorAll(".media-admin-card").forEach((card) => {
         const status = document.createElement("p");
         status.className = "media-status error";
-        status.textContent = "Start backend at http://127.0.0.1:8000 to save media permanently.";
+        status.textContent = "Backend is not connected. Check the API URL in js/config.js to save media permanently.";
         card.appendChild(status);
     });
 });

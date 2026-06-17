@@ -1,5 +1,27 @@
 # Deployment Guide - Ayodhya Ramnagari Tourism
 
+## Frontend-Only Deployment
+
+Use this option when you do not want to deploy the FastAPI backend.
+
+1. Push the repository to GitHub.
+2. In GitHub, open repository **Settings > Pages**.
+3. Select the branch you want to publish, usually `main`.
+4. Select the project root as the publish folder.
+5. Save and wait for GitHub Pages to publish the site.
+
+With frontend-only deployment, normal website pages will work. Backend-powered features such as live hotel prices, online booking, admin hotel tools, media upload, login, and payment verification will show an unavailable message until a backend is connected later.
+
+The frontend API URL is controlled in `js/config.js`. Keep it blank for frontend-only deployment:
+
+```js
+window.RAMNAGARI_API_BASE_URL = window.RAMNAGARI_API_BASE_URL || "";
+```
+
+---
+
+## Optional Backend Setup
+
 ## Local Setup with DATABASE_URL
 
 ### Prerequisites
@@ -65,7 +87,7 @@ Access the application at: http://localhost:5500
 
 ---
 
-## Production Deployment (Render)
+## Optional Backend Deployment (Render)
 
 ### Steps to Deploy on Render
 
@@ -79,8 +101,10 @@ Access the application at: http://localhost:5500
    
    | Key | Value |
    |-----|-------|
-   | `DATABASE_URL` | `mysql+pymysql://root:root1234@localhost:3306/ayodhya_db` |
-   | `ALLOWED_ORIGINS` | `https://your-frontend-domain.com` |
+   | `DATABASE_URL` | `mysql+pymysql://USER:PASSWORD@MYSQL_HOST:3306/DATABASE_NAME` |
+   | `ALLOWED_ORIGINS` | `https://www.ramnagritourism.com,https://ramnagritourism.com` |
+
+   Do not use `localhost` for `DATABASE_URL` on Render unless MySQL is running in the same Render service container. Use the hostname from your production MySQL provider.
 
 3. **render.yaml Configuration**
    
@@ -95,9 +119,9 @@ Access the application at: http://localhost:5500
 
 ### Required Environment Variables for Production
 
-```
-DATABASE_URL=mysql+pymysql://root:root1234@localhost:3306/ayodhya_db
-ALLOWED_ORIGINS=https://your-frontend-domain.com,https://yourdomain.com
+```env
+DATABASE_URL=mysql+pymysql://USER:PASSWORD@MYSQL_HOST:3306/DATABASE_NAME
+ALLOWED_ORIGINS=https://www.ramnagritourism.com,https://ramnagritourism.com
 API_DEBUG=False
 ```
 

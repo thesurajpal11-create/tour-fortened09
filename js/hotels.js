@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = window.RAMNAGARI_API_BASE_URL || "http://127.0.0.1:8000";
 
 const destinationSelect = document.getElementById("hotelDestinationSelect");
 const categorySelect = document.getElementById("hotelCategorySelect");
@@ -57,6 +57,12 @@ function hotelOptionTemplate(option) {
 }
 
 async function loadDestinations() {
+    if (!API_BASE_URL) {
+        destinationSelect.innerHTML = '<option value="">Backend not connected</option>';
+        setHotelStatus("Live hotel prices are unavailable because the backend is not deployed.", "error");
+        return;
+    }
+
     try {
         const response = await fetch(`${API_BASE_URL}/api/catalog/destinations`);
         if (!response.ok) {
@@ -74,7 +80,7 @@ async function loadDestinations() {
         }
     } catch (error) {
         destinationSelect.innerHTML = '<option value="">Backend not connected</option>';
-        setHotelStatus("Start the backend at http://127.0.0.1:8000 to show live hotel prices.", "error");
+        setHotelStatus("Backend is not connected. Check the API URL in js/config.js.", "error");
     }
 }
 

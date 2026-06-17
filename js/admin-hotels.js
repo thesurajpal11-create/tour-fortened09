@@ -39,6 +39,10 @@ function authHeaders() {
 }
 
 async function api(path, options = {}) {
+    if (!ADMIN_API_BASE_URL) {
+        throw new Error("Admin hotel tools are unavailable because the backend is not deployed.");
+    }
+
     const response = await fetch(`${ADMIN_API_BASE_URL}${path}`, {
         ...options,
         headers: {

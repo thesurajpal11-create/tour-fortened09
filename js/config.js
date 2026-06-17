@@ -1,0 +1,1 @@
+window.RAMNAGARI_API_BASE_URL = window.RAMNAGARI_API_BASE_URL || "";
