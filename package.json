@@ -1,5 +1,28 @@
 {
+  "name": "ayodhya-ramnagri-tourism",
+  "version": "1.0.0",
+  "description": "Ayodhya Ramnagri Tourism - Cab, Hotel & Tour Services",
+  "main": "index.html",
   "scripts": {
-    "generate:sitemap": "node scripts/generate-sitemap.js"
+    "dev": "live-server",
+    "build": "npm run generate:sitemap",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "start": "live-server"
+  },
+  "keywords": [
+    "ayodhya",
+    "tourism",
+    "tour-packages",
+    "cab-service",
+    "hotel-booking",
+    "ram-mandir"
+  ],
+  "author": "Ayodhya Ramnagri Tourism",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

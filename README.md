@@ -1,128 +1,125 @@
 # Ayodhya Ramnagri Tourism
 
-Tour and travel website for Ayodhya Ramnagri Tourism, with a static frontend and a FastAPI backend for catalog, booking, payment, and admin workflows.
+> Premium Cab, Hotel & Tour Services across India
 
-## What Is Included
+## 🌟 Features
 
-- Public website pages for destinations, tour packages, hotels, cab tariff, booking, and contact.
-- Customer signup/login, trip estimate, booking, and advance payment flow.
-- Admin panel for destinations, routes, cab rates, hotel owners, hidden hotel rates, and bookings.
-- MySQL-backed FastAPI API with SQLAlchemy models and automatic schema checks.
-- SEO files including `robots.txt`, `sitemap.xml`, social preview image, and Google verification files.
+- ✅ Ayodhya Spiritual Tour Packages
+- ✅ Cab Booking & Tariff Services
+- ✅ Hotel Assistance & Booking
+- ✅ Kashi & Prayagraj Tours
+- ✅ Chitrakoot Package
+- ✅ Quick Enquiry Form
+- ✅ Mobile Responsive Design
+- ✅ WhatsApp Integration
 
-## Project Layout
+## 📁 Project Structure
 
-```text
-tour/
-|-- index.html
-|-- pages/
-|   |-- destinations.html
-|   |-- tour-packages.html
-|   |-- hotels.html
-|   |-- booking.html
-|   |-- cab.html
-|   |-- contact.html
-|   `-- admin.html
-|-- destinations/
-|-- css/
-|-- js/
-|-- images/
-|-- backend/
-|   |-- main.py
-|   |-- database.py
-|   |-- requirements.txt
-|   `-- app/
-|-- start-backend.bat
-|-- start-frontend.bat
-`-- verify-deployment.bat
+```
+.
+├── index.html              # Homepage
+├── blog.html              # Blog page
+├── pages/                 # Sub-pages
+│   ├── destinations.html
+│   ├── tour-packages.html
+│   ├── hotels.html
+│   ├── booking.html
+│   ├── cab.html
+│   └── contact.html
+├── packages/              # Package details
+│   ├── ayodhya-package.html
+│   ├── ayodhya-kashi-prayagraj-package.html
+│   └── chitrakoot-package.html
+├── css/                   # Stylesheets
+│   └── style.css
+├── js/                    # JavaScript files
+│   └── main.js
+├── images/                # Image assets
+├── scripts/               # Build scripts
+│   └── generate-sitemap.js
+├── package.json           # Project dependencies
+├── vercel.json            # Vercel configuration
+├── .env.example           # Environment template
+└── .gitignore             # Git ignore rules
 ```
 
-There is no separate `frontend/` folder. Serve the repository root to run the website.
+## 🚀 Getting Started
 
-## Requirements
+### Prerequisites
+- Node.js 14+ or later
+- npm or yarn
 
-- Python 3.8+
-- MySQL server
-- A browser
+### Installation
 
-## Setup
+```bash
+# Install dependencies
+npm install
 
-1. Create a MySQL database:
+# Generate sitemap
+npm run build
 
-   ```sql
-   CREATE DATABASE ramnagari_tourism CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# Start local development server
+npm run dev
+```
+
+### Environment Setup
+
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
    ```
 
-2. Create or update `.env` in the project root:
+2. Update environment variables as needed
 
-   ```env
-   DATABASE_URL=mysql+pymysql://tour_user:strong_password@127.0.0.1:3306/ramnagari_tourism
-   ALLOWED_ORIGINS=*
-   ```
+## 📝 Available Scripts
 
-3. Install backend dependencies:
+- `npm run dev` - Start live-server development environment
+- `npm run build` - Generate sitemap and build files
+- `npm run generate:sitemap` - Generate XML sitemap
+- `npm start` - Start local server
 
-   ```powershell
-   cd backend
-   python -m venv venv
-   venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+## 🌐 Deployment
 
-4. Start the backend:
+### Deploy to Vercel
 
-   ```powershell
-   python main.py
-   ```
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect `vercel.json` configuration
+3. Set environment variables in Vercel dashboard
+4. Deploy automatically on push to main branch
 
-5. In a second terminal, serve the frontend from the project root:
+### Deployment Features
 
-   ```powershell
-   cd c:\Users\Dell\Desktop\tour
-   python -m http.server 5500
-   ```
+- Automatic sitemap generation during build
+- Static file caching optimization
+- SPA routing configuration
+- Environment variable support
 
-6. Open:
+## 📞 Contact
 
-   ```text
-   http://localhost:5500
-   ```
+- **Phone**: +91 7607745628
+- **WhatsApp**: [Chat Now](https://wa.me/917607745628)
+- **Email**: ayodhyaramnagritourism@gmail.com
+- **Website**: https://ramnagritourism.com
 
-## Useful URLs
+## 📜 Services
 
-| Area | URL |
-| --- | --- |
-| Website | `http://localhost:5500` |
-| Booking page | `http://localhost:5500/pages/booking.html` |
-| Admin panel | `http://localhost:5500/pages/admin.html` |
-| API health | `http://localhost:8000/api/health` |
-| API docs | `http://localhost:8000/docs` |
+- 🚗 Premium Cab Booking
+- 🏨 Hotel Assistance
+- 📍 Local Sightseeing
+- ✈️ Outstation Travel
+- 🛕 Spiritual Tours
 
-## API Summary
+## 📄 License
 
-- `POST /api/auth/signup`
-- `POST /api/auth/login`
-- `GET /api/catalog/destinations`
-- `GET /api/catalog/tour-packages`
-- `GET /api/catalog/hotel-types`
-- `GET /api/catalog/hotel-options`
-- `GET /api/catalog/cab-types`
-- `POST /api/catalog/estimate`
-- `POST /api/bookings/`
-- `GET /api/bookings/`
-- `POST /api/bookings/{booking_id}/payment/order`
-- `POST /api/bookings/payment/verify`
-- `GET /api/admin/bookings`
-- `PUT /api/admin/bookings/{booking_id}/approve`
-- `PUT /api/admin/bookings/{booking_id}/cancel`
+MIT License - See LICENSE file for details
 
-## Quick Scripts
+## 🔍 SEO
 
-- `start-backend.bat` checks Python, creates the backend venv if needed, installs dependencies, and starts FastAPI.
-- `start-frontend.bat` serves the repository root at `http://localhost:5500`.
-- `verify-deployment.bat` checks the expected project files before deployment.
+- XML Sitemap: `/sitemap.xml`
+- Robots.txt: `/robots.txt`
+- Open Graph & Twitter Card Meta Tags
+- Google Analytics Integration
 
-## Support Details
+---
 
-- Phone/WhatsApp: `7607745628`
-- Domain: `https://www.ramnagritourism.com/`
+**© 2026 Ayodhya Ramnagri Tourism. All rights reserved.**
