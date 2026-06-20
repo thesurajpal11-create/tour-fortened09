@@ -1,0 +1,40 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/ayodhya-tour-package",
+      "destination": "/ayodhya-tour-package/index.html"
+    },
+    {
+      "source": "/varanasi-tour-package",
+      "destination": "/varanasi-tour-package/index.html"
+    },
+    {
+      "source": "/prayagraj-tour-package",
+      "destination": "/prayagraj-tour-package/index.html"
+    },
+    {
+      "source": "/chitrakoot-tour-package",
+      "destination": "/chitrakoot-tour-package/index.html"
+    },
+    {
+      "source": "/mathura-vrindavan-tour-package",
+      "destination": "/mathura-vrindavan-tour-package/index.html"
+    },
+    {
+      "source": "/naimisharanya-tour",
+      "destination": "/naimisharanya-tour/index.html"
+    },
+    {
+      "source": "/char-dham-yatra",
+      "destination": "/char-dham-yatra/index.html"
+    },
+    {
+      "source": "/ram-mandir-darshan",
+      "destination": "/ram-mandir-darshan/index.html"
+    }
+  ]
+}

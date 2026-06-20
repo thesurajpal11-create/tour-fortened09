@@ -1,5 +1,7 @@
 {
   "scripts": {
-    "generate:sitemap": "node scripts/generate-sitemap.js"
+    "build": "node scripts/verify-static-site.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "verify": "node scripts/verify-static-site.js"
   }
 }
