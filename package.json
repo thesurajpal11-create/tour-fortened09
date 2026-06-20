@@ -5,8 +5,9 @@
   "main": "index.html",
   "scripts": {
     "dev": "live-server",
-    "build": "npm run generate:sitemap",
+    "build": "npm run generate:sitemap && npm run verify",
     "generate:sitemap": "node scripts/generate-sitemap.js",
+    "verify": "node scripts/verify-static-site.js",
     "start": "live-server"
   },
   "keywords": [
