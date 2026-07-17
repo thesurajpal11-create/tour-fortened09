@@ -1,219 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.ramnagritourism.com/</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/blog.html</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/pages/destinations.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/blogs/ram-mandir-ayodhya-travel-guide-2026.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/blogs/ayodhya-2-day-tour-plan.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.86</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/blogs/ayodhya-to-kashi-tour-guide.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.86</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/blogs/prayagraj-sangam-tour-guide.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.84</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/blogs/chitrakoot-tour-guide.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.84</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/ayodhya-itinerary-for-2-days.html</loc>
-        <lastmod>2026-05-30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.89</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/ayodhya-tour-package.html</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/pages/tour-packages.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/ayodhya-tour-package/</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/ram-mandir-darshan/</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/kashi-tour-package.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/varanasi-tour-package/</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/prayagraj-tour-package.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/prayagraj-tour/</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/chitrakoot-tour-package.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/chitrakoot-tour/</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/naimisharanya-tour-package.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/naimisharanya-tour/</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/char-dham-yatra/</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.86</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/ayodhya-cab-service.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/pages/destinations.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.82</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/pages/tour-packages.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.82</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/pages/hotels.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/pages/cab.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/pages/booking.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/pages/contact.html</loc>
-        <lastmod>2026-05-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/destinations/ayodhya/</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/pages/cab.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/destinations/varanasi/</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/pages/contact.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ramnagritourism.com/destinations/ayodhya/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/destinations/prayagraj/</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/destinations/varanasi/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/destinations/chitrakoot/</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/destinations/prayagraj/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/destinations/mathura/</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/destinations/chitrakoot/</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.74</priority>
+        <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/destinations/vindhyachal/</loc>
-        <lastmod>2026-05-25</lastmod>
+        <loc>https://ramnagritourism.com/destinations/mathura/</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.72</priority>
+        <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ramnagritourism.com/ancient-ayodhya-history-archaeology.html</loc>
-        <lastmod>2026-05-30</lastmod>
+        <loc>https://ramnagritourism.com/destinations/vindhyachal/</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/ancient-kashi-history-archaeology.html</loc>
-        <lastmod>2026-05-31</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
-        <loc>https://www.ramnagritourism.com/ancient-ayodhya-history-archaeology.en.html</loc>
-        <lastmod>2026-05-30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.8</priority>
     </url>
 </urlset>

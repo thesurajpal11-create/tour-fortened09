@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="site-header">
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="container nav-inner">
                 <a href="index.html" class="brand" aria-label="Ramnagari Tourism home">
                     <span class="brand-mark">
@@ -66,10 +66,32 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <strong>Ramnagari Tourism</strong>
+                <p>Trusted tour packages, cab booking, and hotel assistance from Ayodhya, Uttar Pradesh.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="pages/tour-packages.html">Tour Packages</a>
+                <a href="pages/cab.html">Cab Tariff</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <a href="tel:+917607745628">+91 7607745628</a>
+                <a href="https://wa.me/917607745628" target="_blank" rel="noopener">WhatsApp Chat</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
             <p>&copy; <span id="currentYear"></span> Ramnagari Tourism. All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="floating-contact">
+        <a href="tel:+917607745628" class="floating-btn call-float" aria-label="Call Ramnagari Tourism">Call</a>
+        <a href="https://wa.me/917607745628" class="floating-btn whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Ramnagari Tourism">WhatsApp</a>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

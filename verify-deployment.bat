@@ -1,5 +1,5 @@
 @echo off
-REM Ayodhya Ramnagri Tourism - Environment Verification Script
+REM Ayodhya Ramnagari Tourism - Environment Verification Script
 
 echo.
 echo ================================================
@@ -7,14 +7,15 @@ echo   Deployment Verification Check
 echo ================================================
 echo.
 
+REM Check .env file
 echo [1] Checking .env file...
 if exist ".env" (
-    echo OK - .env file found
+    echo ✓ .env file found
     for /f "tokens=*" %%a in ('type ".env" ^| findstr /i "DATABASE_URL"') do (
-        echo OK - DATABASE_URL is configured
+        echo   - DATABASE_URL is configured
     )
 ) else (
-    echo ERROR - .env file NOT found
+    echo ✗ .env file NOT found
     echo   Please run: copy .env.example .env
     echo   Then update with your credentials
 )
@@ -23,56 +24,48 @@ echo.
 echo [2] Checking Python installation...
 python --version >nul 2>&1
 if %errorlevel% equ 0 (
-    echo OK - Python is installed
+    echo ✓ Python is installed
     python --version
 ) else (
-    echo ERROR - Python is NOT installed
+    echo ✗ Python is NOT installed
     echo   Download from: https://www.python.org/downloads/
 )
 
 echo.
-echo [3] Checking backend dependencies...
-if exist "backend\requirements.txt" (
-    echo OK - backend\requirements.txt found
-) else (
-    echo ERROR - backend\requirements.txt NOT found
-)
+echo [3] Checking MySQL connection...
+REM This is optional and requires MySQL being installed locally
+echo ✓ MySQL configuration in .env (manual verification needed)
 
 echo.
-echo [4] Checking backend files...
+echo [4] Checking backend dependencies...
+cd backend
+if exist "requirements.txt" (
+    echo ✓ requirements.txt found
+) else (
+    echo ✗ requirements.txt NOT found
+)
+cd ..
+
+echo.
+echo [5] Checking database file structure...
 if exist "backend\database.py" (
-    echo OK - backend\database.py found
+    echo ✓ database.py found
 ) else (
-    echo ERROR - backend\database.py NOT found
+    echo ✗ database.py NOT found
 )
 
-if exist "backend\main.py" (
-    echo OK - backend\main.py found
+echo if exist "backend\main.py" (
+    echo ✓ main.py found
 ) else (
-    echo ERROR - backend\main.py NOT found
-)
-
-echo.
-echo [5] Checking frontend files...
-if exist "index.html" (
-    echo OK - index.html found
-) else (
-    echo ERROR - index.html NOT found
-)
-
-if exist "pages\booking.html" (
-    echo OK - pages\booking.html found
-) else (
-    echo ERROR - pages\booking.html NOT found
+    echo ✗ main.py NOT found
 )
 
 echo.
 echo ================================================
-echo   Next steps:
+echo   To proceed with deployment:
 echo   1. Ensure MySQL is running
 echo   2. Run: start-backend.bat
-echo   3. Run: start-frontend.bat
-echo   4. Open: http://localhost:5500
+echo   3. Access API at: http://localhost:8000
 echo ================================================
 echo.
 

@@ -63,7 +63,7 @@ echo.
 echo *** IMPORTANT: Keep this window open! ***
 echo.
 echo Open ANOTHER PowerShell window and run:
-echo    cd /d %~dp0
+echo    cd frontend
 echo    python -m http.server 5500
 echo.
 echo Then open in browser:
